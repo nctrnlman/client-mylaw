@@ -1,5 +1,11 @@
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <div className="App grid place-content-center min-h-screen">
+        <button className="btn">Hello MyLaw</button>
+      </div>
+    </>
+  );
 }
 
 export default App;
