@@ -20,3 +20,10 @@ hex code :
 blue : #005289
 gold : #b69025
 white #FFFFF 
+
+
+GIT WORKLFLOW:
+1. di branch dev pull dev
+2. checkout branch baru (coding di branch baru lu)
+3. push branch lu
+4. Open PR ke dev
