@@ -2,7 +2,7 @@ import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 max-w-7xl mx-auto">
       <div className="flex-1">
         <a className="normal-case cursor-pointer">
           <img
