@@ -21,7 +21,7 @@ const AboutUs = () => {
         </p>
         <a
           href=""
-          className="btn btn-outline btn-primary hover:pr-10 group transition-all rounded-none"
+          className="btn btn-outline btn-secondary hover:pr-10 group transition-all rounded-none"
         >
           Read More
           <span className="group-hover:translate-x-4 transition-all">
