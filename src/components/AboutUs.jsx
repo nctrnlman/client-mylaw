@@ -2,7 +2,7 @@ import aboutUsImg from "../assets/img-about_us.png";
 
 const AboutUs = () => {
   return (
-    <div className="max-w-7xl p-2 bg-base-100 grid grid-cols-2 items-center gap-5 mx-auto">
+    <div className="max-w-7xl px-2 py-16 bg-base-100 grid grid-cols-2 items-center gap-5 mx-auto">
       <div>
         <h2 className="text-4xl font-bold mb-5">About Us</h2>
         <p className="mb-4">
