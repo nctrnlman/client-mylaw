@@ -1,24 +1,17 @@
-import AboutUs from "./components/AboutUs";
-import Clients from "./components/Clients";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Services from "./components/Services";
-import Strategy from "./components/Strategy";
-import Summary from "./components/Summary";
+import { Routes, Route } from "react-router-dom";
+import Footer from "./component/Footer";
+import Home from "./pages/Home";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
-    <>
-      <div>
-        <Navbar />
-        <Hero />
-        <Summary />
-        <AboutUs />
-        <Services />
-        <Clients />
-        <Strategy />
-      </div>
-    </>
+    <div className="place-content-center min-h-screen bg-white ">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

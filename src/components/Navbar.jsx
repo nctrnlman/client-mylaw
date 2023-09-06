@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 max-w-7xl mx-auto">
+    <div className="navbar max-w-7xl mx-auto">
       <div className="flex-1">
         <a className="normal-case cursor-pointer">
           <img
@@ -15,13 +16,13 @@ const Navbar = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>About</a>
+            <Link to="/">About</Link>
           </li>
           <li>
-            <a>Services</a>
+            <Link to="/">Sevices</Link>
           </li>
           <li>
-            <a>Contact Us</a>
+            <Link to="/contact-us">Contact Us</Link>
           </li>
         </ul>
       </div>

@@ -3,7 +3,13 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#005289",
+        secondary: "#b69025",
+        white: "#FFFFFF",
+      },
+    },
   },
   daisyui: {
     themes: [
