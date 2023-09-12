@@ -15,7 +15,7 @@ function ContactUs() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto md:p-20">
+      <div className="container mx-auto md:px-20">
         <div className="flex flex-col md:flex-row mb-8 md:mb-16 p-4 md:p-20">
           <div className="w-full md:w-1/2 relative flex justify-start p-4">
             <div className="p-4 md:p-1">
