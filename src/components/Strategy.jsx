@@ -6,7 +6,7 @@ const Strategy = () => {
       <div className="px-2 max-w-7xl mx-auto">
         <div className="mb-10 flex justify-center items-center">
           <h2 className="text-white px-4 py-2 text-4xl font-bold text-center after:content-[''] after:block after:py-2 after:border-b after:border-secondary after:scale-x-0 hover:after:scale-x-100 after:transition">
-            Our Stragey
+            Our Strategy
           </h2>
         </div>
         <div className="grid grid-cols-1 grid-rows-1 place-content-center">
