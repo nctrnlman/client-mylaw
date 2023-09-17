@@ -1,6 +1,7 @@
-import bapLogo from "../assets/clients-logo/bap.png";
-import logitechLogo from "../assets/clients-logo/logitech.png";
-import schneiderLogo from "../assets/clients-logo/schneider.png";
+import { Link } from "react-router-dom";
+import hokben from "../assets/clients-logo/hokben.png";
+import perikanan from "../assets/clients-logo/perikanan-indonesia.png";
+import pln from "../assets/clients-logo/pln.png";
 
 const Clients = () => {
   return (
@@ -11,11 +12,14 @@ const Clients = () => {
         </h2>
       </div>
       <div className="grid grid-cols-4 gap-5 grid-rows-1 items-center justify-center">
-        <img src={bapLogo} alt="" className="w-1/2 h-auto mx-auto" />
-        <img src={logitechLogo} alt="" className="w-1/2 h-auto mx-auto" />
-        <img src={schneiderLogo} alt="" className="w-1/2 h-auto mx-auto" />
+        <img src={hokben} alt="" className="w-1/2 h-auto mx-auto" />
+        <img src={perikanan} alt="" className="w-1/2 h-auto mx-auto" />
+        <img src={pln} alt="" className="w-1/2 h-auto mx-auto" />
         <div className="flex flex-col justify-center items-center">
-          <a href="" className="btn btn-circle btn-outline btn-primary mb-2">
+          <Link
+            to="/client"
+            className="btn btn-circle btn-outline btn-primary mb-2"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -28,7 +32,7 @@ const Clients = () => {
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </Link>
           <span className="text-xs text-primary">See All</span>
         </div>
       </div>
