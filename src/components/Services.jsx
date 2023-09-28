@@ -44,7 +44,7 @@ const Services = () => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-7xl mx-auto py-2 flex flex-col justify-center items-center">
-          <h2 className="mb-16 text-5xl font-bold">Our Services</h2>
+          <h2 className="mb-16 text-5xl font-bold">Our Expertise</h2>
           <div className="grid grid-cols-5 grid-rows-1 gap-5">
             {servicesData.map((service) => (
               <div className="card w-full glass" key={service.name}>
