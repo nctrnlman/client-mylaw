@@ -99,15 +99,26 @@ function ArticleDetail() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto px-4 lg:px-96 py-6">
-        <img
-          src={selectedArticle.image}
-          alt="Article Banner"
-          className="mx-auto mb-4 lg:max-w-2xl"
-        />
-        <h1 className="text-2xl font-semibold">{selectedArticle.title}</h1>
-        <p className="text-gray-600">Date: {selectedArticle.date}</p>
-        <p className="text-justify">{selectedArticle.content}</p>
+      <div className="container mx-auto max-w-7xl">
+        {/* Article Banner */}
+        <div className="mb-6 overflow-hidden rounded-lg">
+          <img
+            src={selectedArticle.image}
+            alt="Article Banner"
+            className="mx-auto max-w-full object-cover h-64 rounded-lg"
+          />
+        </div>
+
+        {/* Article Details */}
+        <div className="bg-white p-8  ">
+          <h1 className="text-3xl lg:text-4xl font-semibold mb-4">
+            {selectedArticle.title}
+          </h1>
+          <p className="text-gray-600 mb-2">Date: {selectedArticle.date}</p>
+
+          {/* Article Content */}
+          <p className="text-justify leading-7">{selectedArticle.content}</p>
+        </div>
       </div>
     </>
   );
