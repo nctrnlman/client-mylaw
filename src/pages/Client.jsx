@@ -1,11 +1,11 @@
 import React from "react";
+import ContactUs from "../components/ContactUs";
 import hokben from "../assets/clients-logo/hokben.png";
 import perikanan from "../assets/clients-logo/perikanan-indonesia.png";
 import pln from "../assets/clients-logo/pln.png";
 import tokio from "../assets/clients-logo/tokio.png";
 import trilogi from "../assets/clients-logo/trilogi.png";
 import logitech from "../assets/clients-logo/logitech.png";
-import woman from "../assets/woman_contact.png";
 import Navbar from "../components/Navbar";
 import TestimonialCard from "../components/TestimonialCard";
 
@@ -164,7 +164,7 @@ function Client() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row pt-4 md:pt-20 items-center justify-around p-5">
+        {/* <div className="flex flex-col md:flex-row pt-4 md:pt-20 items-center justify-around p-5">
           <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-4">
             <h4 className="text-lg md:text-2xl font-semibold mb-2 md:mb-4 text-center md:text-left">
               Ready to make a move? Contact us now and discover how we can guide
@@ -180,10 +180,13 @@ function Client() {
             </a>
           </div>
 
-          {/* Bagian kanan */}
           <div className="w-full md:w-1/2 pl-0 md:pl-8 flex justify-center">
             <img src={woman} alt="Woman" className="w-48 md:w-64 h-auto" />
           </div>
+        </div> */}
+
+        <div className="p-5">
+          <ContactUs />
         </div>
       </div>
     </div>

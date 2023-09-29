@@ -1,3 +1,4 @@
+import ContactUs from "../components/ContactUs";
 import Navbar from "../components/Navbar";
 
 const corporateServices = [
@@ -205,6 +206,8 @@ const Services = () => {
             <li key={service}>{service}</li>
           ))}
         </div>
+
+        <ContactUs />
       </div>
     </>
   );
