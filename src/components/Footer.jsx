@@ -3,24 +3,45 @@ import mylawLogo from "../assets/mylaw_logo.png";
 
 function Footer() {
   return (
-    <footer className="flex-row  p-10  text-white bg-[#005289]">
-      <div className="footer pb-4">
+    <footer className="flex-row  p-10  text-white bg-[#005289] ">
+      <div className="footer pb-4 max-w-7xl mx-auto">
         <div>
           <img src={mylawLogo} alt="MyLaw Logo" width="80px" />
-          <h1 className="footer-title text-lg ">Mylaw.id</h1>
-          <p className="text-base">Providing Legal Support since 2022</p>
+          <p className="">Providing Legal Support since 2022</p>
         </div>
 
+        <nav className="text-white">
+          <header className="text-lg font-semibold ">Page</header>
+          <a href="/" className="link link-hover">
+            Home
+          </a>
+          <a href="/about-us" className="link link-hover">
+            About
+          </a>
+          <a href="/services" className="link link-hover ">
+            Services
+          </a>
+          <a href="/client" className="link link-hover ">
+            Clients
+          </a>
+          <a href="/article" className="link link-hover">
+            News & Insight
+          </a>
+          <a href="/contact-us" className="link link-hover ">
+            Contact Us
+          </a>
+        </nav>
+
         <div>
-          <span className="footer-title text-lg ">Our Location</span>
-          <p className="text-base">
+          <span className="text-lg font-semibold">Our Location</span>
+          <p className="">
             Jalan Pengadegan Barat IV No.12A <br />
             Pancoran, Jakarta Selatan
           </p>
         </div>
 
         <div>
-          <span className="footer-title text-lg">Social</span>
+          <span className="text-lg font-semibold">Social</span>
           <div className="grid grid-flow-col gap-4">
             <a
               href="https://www.linkedin.com/in/mylaw-id-039818270/"
