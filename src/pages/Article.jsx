@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Image1 from "../assets/articles-img/article-1.jpeg";
 import Image2 from "../assets/articles-img/article-2.jpeg";
 import Image3 from "../assets/articles-img/article-3.jpeg";
+import { useState } from "react";
 
 const newsArticles = [
   {
@@ -9,6 +10,7 @@ const newsArticles = [
     image: Image1,
     title: "New Indonesian Law Affects Tax Regulations",
     date: "September 18, 2023",
+    category: "Legal Updates",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor odio nec quam auctor, eget cursus justo congue. Maecenas tincidunt ex eu sem dictum, in vehicula libero auctor.",
   },
@@ -17,6 +19,7 @@ const newsArticles = [
     image: Image2,
     title: "Changes in Environmental Regulations in Indonesia",
     date: "September 17, 2023",
+    category: "Legal Updates",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor odio nec quam auctor, eget cursus justo congue. Maecenas tincidunt ex eu sem dictum, in vehicula libero auctor.",
   },
@@ -25,6 +28,7 @@ const newsArticles = [
     image: Image3,
     title: "New Data Privacy Regulations in Indonesia",
     date: "September 16, 2023",
+    category: "Legal Updates",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor odio nec quam auctor, eget cursus justo congue. Maecenas tincidunt ex eu sem dictum, in vehicula libero auctor.",
   },
@@ -33,6 +37,7 @@ const newsArticles = [
     image: Image2,
     title: "Indonesian Government Announces Trade Policy Changes",
     date: "September 15, 2023",
+    category: "Events",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor odio nec quam auctor, eget cursus justo congue. Maecenas tincidunt ex eu sem dictum, in vehicula libero auctor.",
   },
@@ -41,6 +46,7 @@ const newsArticles = [
     image: Image1,
     title: "Legal Implications of Technology Advancements in Indonesia",
     date: "September 14, 2023",
+    category: "Events",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor odio nec quam auctor, eget cursus justo congue. Maecenas tincidunt ex eu sem dictum, in vehicula libero auctor.",
   },
@@ -49,6 +55,7 @@ const newsArticles = [
     image: Image2,
     title: "New Intellectual Property Laws in Indonesia",
     date: "September 13, 2023",
+    category: "News",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor odio nec quam auctor, eget cursus justo congue. Maecenas tincidunt ex eu sem dictum, in vehicula libero auctor.",
   },
@@ -57,6 +64,7 @@ const newsArticles = [
     image: Image1,
     title: "Recent Environmental Lawsuits in Indonesia",
     date: "September 12, 2023",
+    category: "News",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor odio nec quam auctor, eget cursus justo congue. Maecenas tincidunt ex eu sem dictum, in vehicula libero auctor.",
   },
@@ -65,6 +73,7 @@ const newsArticles = [
     image: Image2,
     title: "Challenges in Contract Law for Indonesian Businesses",
     date: "September 11, 2023",
+    category: "Events",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor odio nec quam auctor, eget cursus justo congue. Maecenas tincidunt ex eu sem dictum, in vehicula libero auctor.",
   },
@@ -73,6 +82,7 @@ const newsArticles = [
     image: Image1,
     title: "Impact of Labor Law Reforms in Indonesia",
     date: "September 10, 2023",
+    category: "News",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor odio nec quam auctor, eget cursus justo congue. Maecenas tincidunt ex eu sem dictum, in vehicula libero auctor.",
   },
@@ -81,11 +91,19 @@ const newsArticles = [
     image: Image2,
     title: "New Regulations for Foreign Investments in Indonesia",
     date: "September 9, 2023",
+    category: "Legal Updates",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor odio nec quam auctor, eget cursus justo congue. Maecenas tincidunt ex eu sem dictum, in vehicula libero auctor.",
   },
 ];
 function Article() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const filteredArticles =
+    selectedCategory === "All"
+      ? newsArticles
+      : newsArticles.filter((article) => article.category === selectedCategory);
+
   return (
     <>
       <Navbar />
@@ -101,13 +119,54 @@ function Article() {
           }}
         >
           <div className="text-white text-4xl font-bold absolute top-40 left-20 ">
-            News
+            News & Insight
           </div>
+        </div>
+
+        {/* Category Section */}
+        <div className="py-4 text-center my-6 mx-56 rounded-lg">
+          <h1 className="text-4xl font-semibold text-primary mb-2">
+            Categories
+          </h1>
+          <ul className="flex space-x-4 justify-center pt-2">
+            <li
+              className={`text-primary hover:text-secondary cursor-pointer ${
+                selectedCategory === "All" ? "font-semibold" : ""
+              }`}
+              onClick={() => setSelectedCategory("All")}
+            >
+              All
+            </li>
+            <li
+              className={`text-primary hover:text-secondary cursor-pointer ${
+                selectedCategory === "Legal Updates" ? "font-semibold" : ""
+              }`}
+              onClick={() => setSelectedCategory("Legal Updates")}
+            >
+              Legal Updates
+            </li>
+            <li
+              className={`text-primary hover:text-secondary cursor-pointer ${
+                selectedCategory === "News" ? "font-semibold" : ""
+              }`}
+              onClick={() => setSelectedCategory("News")}
+            >
+              News
+            </li>
+            <li
+              className={`text-primary hover:text-secondary cursor-pointer ${
+                selectedCategory === "Events" ? "font-semibold" : ""
+              }`}
+              onClick={() => setSelectedCategory("Events")}
+            >
+              Events
+            </li>
+          </ul>
         </div>
 
         {/* News Articles */}
         <div className="container mx-auto py-6 mt-4">
-          {newsArticles.map((article) => (
+          {filteredArticles.map((article) => (
             <div key={article.id} className="mb-8">
               <div className="flex flex-wrap justify-center items-center">
                 {/* Left Column - Image */}
@@ -136,7 +195,7 @@ function Article() {
                     <p>{article.content}</p>
                   </div>
                   <a
-                    href={`/article/${article.id}`} // Use the appropriate route
+                    href={`/news-article/${article.id}`} // Use the appropriate route
                     className="btn btn-primary mt-3"
                   >
                     Read More
