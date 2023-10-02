@@ -19,10 +19,10 @@ function ContactUs() {
         <div className="flex flex-col md:flex-row mb-8">
           <div className="flex-1 p-4 md:pb-7  mx-auto md:mx-0">
             <div>
-              <h2 className="text-3xl md:text-5xl  font-bold mb-2 md:mb-4 text-primary">
+              <h2 className="text-3xl md:text-7xl  font-bold mb-2 md:mb-4 text-primary">
                 Get in Touch
               </h2>
-              <p className="text-base md:text-lg  text-black mb-7">
+              <p className="text-base md:text-xl  text-black mb-7">
                 Feel free to contact us and discover more about the services we
                 offer. Our team is ready to assist you.
               </p>
@@ -106,10 +106,10 @@ function ContactUs() {
               ></iframe>
             </div>
             <div className="space-y-4 text-black p-2 rounded-lg">
-              <h2 className="text-2xl md:text-4xl font-semibold mb-1">
+              <h2 className="text-2xl md:text-5xl font-semibold mb-1">
                 Contact Information
               </h2>
-              <p className="text-lg">
+              <p className="text-xl">
                 Feel free to contact us using the information below:
               </p>
               <div className="mt-4 flex flex-col gap-2">
@@ -143,11 +143,11 @@ function ContactUs() {
         </div>
 
         <div className="flex flex-col items-center py-20 gap-5 text-black">
-          <div className="md:w-1/2 lg:w-1/2 p-4 pb-5 text-center">
-            <h2 className="text-3xl md:text-4xl  font-bold text-primary">
+          <div className=" p-4 pb-5 text-center">
+            <h2 className="text-3xl md:text-5xl   font-bold text-primary">
               Unlocking Solutions for You
             </h2>
-            <p className="pt-4 text-base md:text-lg ">
+            <p className="pt-4 text-base md:text-xl ">
               With our wealth of experience and unwavering commitment, we are
               dedicated to delivering the optimal solutions tailored just for
               you.

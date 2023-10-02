@@ -118,7 +118,7 @@ function Article() {
             animation: "gradientAnimation 5s linear infinite",
           }}
         >
-          <div className="text-white text-4xl font-bold absolute top-40 left-20 ">
+          <div className="text-white md:text-7xl font-bold absolute top-40 left-20 ">
             News & Insight
           </div>
         </div>
@@ -195,7 +195,7 @@ function Article() {
                     <p>{article.content}</p>
                   </div>
                   <a
-                    href={`/news-article/${article.id}`} // Use the appropriate route
+                    href={`/article/${article.id}`} // Use the appropriate route
                     className="btn btn-primary mt-3"
                   >
                     Read More
