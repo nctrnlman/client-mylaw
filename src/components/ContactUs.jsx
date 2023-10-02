@@ -20,7 +20,7 @@ const ContactUs = () => {
           </button>
         </a> */}
         <a
-          href="/contact-u"
+          href="/contact-us"
           className="btn btn-outline btn-secondary hover:pr-10 group transition-all rounded-none"
         >
           Get in Touch

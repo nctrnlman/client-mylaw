@@ -44,7 +44,7 @@ function Client() {
   ];
   const clientNamesE = ["Schneider Group", "Logitech Singapore Pte, Ltd."];
 
-  const logos = [hokben, pln, trilogi, tokio, perikanan, logitech];
+  const logos = [hokben, trilogi, pln, tokio, perikanan];
 
   const testimonialsData = [
     {
@@ -101,10 +101,15 @@ function Client() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-12 md:mb-10">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-4  mb-12 md:mb-10">
             {logos.map((logo, index) => (
-              <div key={index} className="w-32 md:w-40 h-auto mx-auto">
-                <img src={logo} alt={`Logo ${index}`} className=" h-auto" />
+              <div
+                key={index}
+                className={`w-${
+                  index === 4 ? "48" : "32"
+                } h-auto mx-auto md:w-${index === 4 ? "50" : "44"}`}
+              >
+                <img src={logo} alt={`Logo ${index}`} className="h-auto" />
               </div>
             ))}
           </div>
