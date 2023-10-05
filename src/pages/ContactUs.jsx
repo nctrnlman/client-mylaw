@@ -19,10 +19,10 @@ function ContactUs() {
         <div className="flex flex-col md:flex-row mb-8">
           <div className="flex-1 p-4 md:pb-7  mx-auto md:mx-0">
             <div>
-              <h2 className="text-3xl md:text-5xl  font-bold mb-2 md:mb-4 text-primary">
+              <h2 className="text-3xl md:text-7xl  font-bold mb-2 md:mb-4 text-primary">
                 Get in Touch
               </h2>
-              <p className="text-base md:text-lg  text-black mb-7">
+              <p className="text-lg md:text-2xl  text-black mb-7">
                 Feel free to contact us and discover more about the services we
                 offer. Our team is ready to assist you.
               </p>
@@ -80,7 +80,7 @@ function ContactUs() {
                 ></textarea>
               </div>
               <div className="form-control">
-                <button className="btn bg-primary text-white w-full text-base  ">
+                <button className="btn bg-primary hover:bg-secondary text-white w-full text-base  ">
                   Send Message
                 </button>
               </div>
@@ -93,7 +93,7 @@ function ContactUs() {
           />
         </div>
 
-        <div className="mx-auto w-full gap-4 py-10 p-4">
+        <div className="mx-auto w-full gap-4 py-10 md:pt-20 p-4">
           <div className="gap-4 text-white p-4 flex flex-col-reverse md:flex-row shadow-lg w-full  mx-auto">
             <div className="w-full md:w-1/2 ">
               <iframe
@@ -106,34 +106,34 @@ function ContactUs() {
               ></iframe>
             </div>
             <div className="space-y-4 text-black p-2 rounded-lg">
-              <h2 className="text-2xl md:text-4xl font-semibold mb-1">
+              <h2 className="text-2xl md:text-5xl font-semibold mb-1">
                 Contact Information
               </h2>
-              <p className="text-lg">
+              <p className="text-xl ">
                 Feel free to contact us using the information below:
               </p>
               <div className="mt-4 flex flex-col gap-2">
-                <p className="flex items-center text-base">
+                <p className="flex items-center text-lg">
                   <FaInstagram className="h-6 w-6 mr-2 text-primary" />
                   <a href="https://www.instagram.com/mylaw.id/">mylaw.id</a>
                 </p>
-                <p className="flex items-center text-base">
+                <p className="flex items-center text-lg">
                   <FaLinkedin className="h-6 w-6 mr-2 text-primary" />
                   <a href="https://www.linkedin.com/company/mylaw-id/">
                     LinkedIn
                   </a>
                 </p>
-                <p className="flex items-center text-base">
+                <p className="flex items-center text-lg">
                   <FaYoutube className="h-6 w-6 mr-2 text-primary" />
                   <a href="https://www.youtube.com/user/officialmylawid">
                     Official MyLaw ID
                   </a>
                 </p>
-                <p className="flex items-center text-base">
+                <p className="flex items-center text-lg">
                   <FaPhone className="h-6 w-6 mr-2 text-primary" />
                   0812-1111-0564
                 </p>
-                <p className="flex items-center text-base">
+                <p className="flex items-center text-lg">
                   <FaEnvelope className="h-6 w-6 mr-2 text-primary" />
                   mylawid2022@gmail.com
                 </p>
@@ -143,11 +143,11 @@ function ContactUs() {
         </div>
 
         <div className="flex flex-col items-center py-20 gap-5 text-black">
-          <div className="md:w-1/2 lg:w-1/2 p-4 pb-5 text-center">
-            <h2 className="text-3xl md:text-4xl  font-bold text-primary">
+          <div className=" p-4 pb-7 text-center">
+            <h2 className="text-3xl md:text-5xl pb-2  font-bold text-primary">
               Unlocking Solutions for You
             </h2>
-            <p className="pt-4 text-base md:text-lg ">
+            <p className="pt-4 text-xl md:text-2xl ">
               With our wealth of experience and unwavering commitment, we are
               dedicated to delivering the optimal solutions tailored just for
               you.
@@ -155,21 +155,21 @@ function ContactUs() {
           </div>
           <div className="flex flex-col md:flex-row justify-between">
             <div className="w-full md:w-1/3 p-4 text-center flex flex-col gap-4">
-              <FaHandsHelping size={64} className="mb-2 mx-auto text-primary" />
-              <h2 className="text-xl md:text-2xl  font-semibold text-black">
+              <FaHandsHelping size={64} className="mb-4 mx-auto text-primary" />
+              <h2 className="text-lg md:text-2xl  font-semibold text-black">
                 Reach Out to Us
               </h2>
-              <p>
+              <p className="md:text-lg pt-2">
                 Take the first step with a free case review. Engage in our chat,
                 or simply fill out our form.
               </p>
             </div>
             <div className="w-full md:w-1/3 p-4 text-center flex flex-col gap-4">
-              <FaGavel size={64} className="mb-2 mx-auto text-primary" />
-              <h2 className="text-xl md:text-2xl  font-semibold text-black">
+              <FaGavel size={64} className="mb-4 mx-auto text-primary" />
+              <h2 className="text-lg md:text-2xl  font-semibold text-black">
                 Crafting Your Legal Strategy
               </h2>
-              <p>
+              <p className="md:text-lg pt-2">
                 While you focus on your family, we diligently gather evidence
                 and build a robust case on your behalf.
               </p>
@@ -177,12 +177,12 @@ function ContactUs() {
             <div className="w-full md:w-1/3 p-4 text-center flex flex-col gap-4">
               <FaMoneyBillWave
                 size={64}
-                className="mb-2 mx-auto text-primary"
+                className="mb-4 mx-auto text-primary"
               />
-              <h2 className="text-xl md:text-2xl font-semibold">
+              <h2 className="text-lg md:text-2xl font-semibold">
                 Compensation Awaits
               </h2>
-              <p>
+              <p className="md:text-lg pt-2">
                 Join the countless families we’ve assisted in securing billions
                 in settlements and verdicts.
               </p>

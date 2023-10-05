@@ -11,7 +11,7 @@ import TestimonialCard from "../components/TestimonialCard";
 
 function Client() {
   const clientNamesA = [
-    "PT. KolaborasiGlobal Sukses (Gowork)",
+    "PT. Kolaborasi Global Sukses",
     "PT. Raksasa Laju Lintang",
     "PT. Indofresh",
     "PT. Gastro Gizi Sarana",
@@ -42,122 +42,150 @@ function Client() {
     "PT. Putra Damai Abadi",
     "PT. Wahana Tata",
   ];
+  const clientNamesE = ["Schneider Group", "Logitech Singapore Pte, Ltd."];
 
-  const logos = [hokben, trilogi, tokio];
-  const logo = [pln, perikanan, logitech];
+  const logos = [hokben, trilogi, pln, tokio];
 
   const testimonialsData = [
     {
-      clientName: "John Doe",
-      position: "CEO, ABC Company",
-      testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      clientName: "Alice Smith",
+      position: "Marketing Director, XYZ Corp",
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
-      clientName: "John Doe",
-      position: "CEO, ABC Company",
-      testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      clientName: "Bob Johnson",
+      position: "CTO, DEF Company",
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
-      clientName: "John Doe",
-      position: "CEO, ABC Company",
-      testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      clientName: "Charlie Brown",
+      position: "Founder, GHI Startup",
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
-    // Tambahkan testimoni lainnya sesuai kebutuhan
+    {
+      clientName: "Diana Miller",
+      position: "COO, JKL Enterprises",
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+    {
+      clientName: "Edward Davis",
+      position: "CEO, MNO Corporation",
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+    },
+    {
+      clientName: "Fiona White",
+      position: "President, PQR Inc",
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+    },
   ];
 
   return (
     <div>
       <Navbar />
-      <div className="container mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row justify-between gap-4">
-          {/* Bagian kiri */}
-          <div className="text-center md:text-left w-full md:w-1/2 py-10">
-            <h2 className="text-4xl md:text-5xl font-bold pb-6">
+      <div className="  ">
+        <div className="flex flex-col  justify-between gap-4 max-w-7xl mx-auto container ">
+          <div className="text-center md:text-left w-full  py-20">
+            <h2 className="text-4xl md:text-7xl font-bold pb-6">
               <span className="text-black">Discover Our </span>
               <span className="text-primary">Clients</span>
             </h2>
-            <p className="text-lg">
+            <p className="text-lg md:text-2xl">
               Explore the diverse and valued clients who have trusted us on
               their journey to success.
             </p>
           </div>
 
-          {/* Bagian kanan */}
-          <div className="flex flex-col md:flex-row  justify-around  md:w-1/2">
-            <div className="flex flex-col items-center md:items-start pt-10 justify-between gap-14 ">
-              {logos.map((logo, index) => (
-                <div key={index} className="w-32 h-auto mx-auto mb-4">
-                  <img
-                    src={logo}
-                    alt={`Logo ${index}`}
-                    className="w-full h-auto transform scale-110"
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col items-center md:items-start pt-10 justify-between gap-14 ">
-              {logo.map((logo, index) => (
-                <div key={index} className="w-32 h-auto mx-auto mb-4">
-                  <img
-                    src={logo}
-                    alt={`Logo ${index}`}
-                    className="w-full h-auto transform scale-110"
-                  />
-                </div>
-              ))}
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-4  mb-12 md:mb-10">
+            {logos.map((logo, index) => (
+              <div key={index} className="w-32  md:w-40 h-auto mx-auto mb-4">
+                <img
+                  src={logo}
+                  alt={`Logo ${index}`}
+                  className="w-full h-auto transform scale-110"
+                />
+              </div>
+            ))}
+            <div className="w-36  md:w-[200px] h-auto mx-auto mb-4">
+              <img
+                src={perikanan}
+                alt=""
+                className="w-full h-auto transform scale-110"
+              />
             </div>
           </div>
         </div>
 
-        <div className="text-black py-10 my-[70px]">
-          <h2 className="text-4xl md:text-4xl text-center text-black font-bold mb-4 md:mb-8 pb-2 md:pb-5">
-            Our Valued Clients
-          </h2>
-          <div className="flex flex-col md:flex-row justify-between p-4">
-            {/* Client Names A */}
-            <div className="flex flex-col text-lg mb-4 md:mb-0 md:w-1/4">
-              {clientNamesA.map((name, index) => (
-                <p key={index} className="font-normal mb-2">
-                  {name}
-                </p>
-              ))}
-            </div>
+        <div className="bg-primary text-white pb-[80px] pt-[80px] md:mt-[150px] ">
+          <div className=" mx-auto container px-4 ">
+            <h2 className="text-4xl md:text-6xl text-center  font-bold mb-4 md:mb-8 pb-2 md:pb-5">
+              Our Valued Clients
+            </h2>
+            <div className="flex flex-col md:flex-row md:justify-between px-4 py-10 gap-4 ">
+              {/* Client Names A */}
+              <div className="flex flex-col text-lg mb-4 md:mb-0  ">
+                {clientNamesA.map((name, index) => (
+                  <p key={index} className="font-normal mb-2">
+                    {name}
+                  </p>
+                ))}
+              </div>
 
-            {/* Client Names B */}
-            <div className="flex flex-col text-lg mb-4 md:mb-0 md:w-1/4">
-              {clientNamesB.map((name, index) => (
-                <p key={index} className="font-normal mb-2">
-                  {name}
-                </p>
-              ))}
-            </div>
+              {/* Client Names B */}
+              <div className="flex flex-col text-lg mb-4 md:mb-0 ">
+                {clientNamesB.map((name, index) => (
+                  <p key={index} className="font-normal mb-2">
+                    {name}
+                  </p>
+                ))}
+              </div>
 
-            {/* Client Names C */}
-            <div className="flex flex-col text-lg mb-4 md:mb-0 md:w-1/4">
-              {clientNamesC.map((name, index) => (
-                <p key={index} className="font-normal mb-2">
-                  {name}
-                </p>
-              ))}
-            </div>
+              {/* Client Names C */}
+              <div className="flex flex-col text-lg mb-4 md:mb-0 ">
+                {clientNamesC.map((name, index) => (
+                  <p key={index} className="font-normal mb-2">
+                    {name}
+                  </p>
+                ))}
+              </div>
 
-            {/* Client Names D */}
-            <div className="flex flex-col text-lg md:w-1/4">
-              {clientNamesD.map((name, index) => (
-                <p key={index} className="font-normal mb-2">
-                  {name}
-                </p>
-              ))}
+              {/* Client Names D */}
+              <div className="flex flex-col text-lg mb-4 md:mb-0  ">
+                {clientNamesD.map((name, index) => (
+                  <p key={index} className="font-normal mb-2">
+                    {name}
+                  </p>
+                ))}
+              </div>
+
+              <div className="flex flex-col text-lg mb-4 md:mb-0  ">
+                {clientNamesE.map((name, index) => (
+                  <p key={index} className="font-normal mb-2">
+                    {name}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="p-10">
-          <h2 className="text-4xl md:text-4xl text-center text-primary font-bold mb-4 md:mb-8 pb-2 md:pb-10">
+        <div className="p-10 pt-20 max-w-7xl mx-auto container ">
+          {/* <h2 className="text-4xl md:text-6xl text-center text-primary font-bold mb-4 md:mb-8 pb-2 md:pb-10">
             What Our Clients Say
+          </h2> */}
+
+          <h2 className="text-4xl md:text-6xl text-center text-primary font-bold mb-10 md:mb-8 pb-2 md:pb-10">
+            <span className="">What Our </span>
+            <span className="">Clients </span>
+            <span className="">Say</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {testimonialsData.map((testimonial, index) => (
               <TestimonialCard key={index} {...testimonial} />
             ))}
@@ -185,7 +213,7 @@ function Client() {
           </div>
         </div> */}
 
-        <div className="p-5">
+        <div className="py-5 pb-10 px-5 max-w-7xl mx-auto container  ">
           <ContactUs />
         </div>
       </div>
