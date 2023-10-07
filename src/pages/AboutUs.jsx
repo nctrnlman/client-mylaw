@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import aboutHero from "../assets/about-hero.jpg";
 import bgCareer from "../assets/img1.jpg";
 import bgWho from "../assets/logo.png";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 const Services = () => {
   return (
@@ -56,7 +58,11 @@ const Services = () => {
         </div>
       </div> */}
 
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
         className="relative h-screen flex items-center bg-cover bg-center"
         style={{
           backgroundImage: `url(${aboutHero})`,
@@ -93,9 +99,15 @@ const Services = () => {
             </span>
           </a>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="max-w-7xl mx-auto pt-5 md:pt-10 lg:pt-20 flex flex-col-reverse lg:flex-row px-5">
+      <motion.div
+        variants={fadeIn("right", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }}
+        className="max-w-7xl mx-auto pt-5 md:pt-10 lg:pt-20 flex flex-col-reverse lg:flex-row px-5"
+      >
         <div className="lg:w-[70%] ">
           <h1 className="text-4xl md:text-5xl font-bold text-primary pb-4 lg:pb-6">
             Who Are We ?
@@ -139,10 +151,16 @@ const Services = () => {
             className="w-full h-full object-cover md:transform md:scale-110"
           />
         </div>
-      </div>
+      </motion.div>
 
       <div className="max-w-7xl mx-auto mt-10 mb-20 md:mt-40 md:mb-40 px-5 md:py-15 flex flex-col gap-10">
-        <div className="pb-20 md:pb-40 md:flex md:items-center flex flex-col-reverse lg:flex-row">
+        <motion.div
+          variants={fadeIn("left", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="pb-20 md:pb-40 md:flex md:items-center flex flex-col-reverse lg:flex-row"
+        >
           <div className="md:flex-1 mb-6 md:mb-0 ">
             <h2 className="text-4xl md:text-5xl font-bold mb-5 text-center md:text-left text-primary">
               Our Vision
@@ -159,9 +177,15 @@ const Services = () => {
           <div className="md:flex-1 py-5 flex items-center justify-center">
             <FaGavel className="text-[100px] md:text-[160px] text-secondary" />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="md:flex md:items-center">
+        <motion.div
+          variants={fadeIn("right", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="md:flex md:items-center"
+        >
           <div className="md:flex-1 flex items-center justify-center mb-6 md:mb-0">
             <FaBalanceScale className="text-[100px] md:text-[180px] text-secondary" />
           </div>
@@ -181,7 +205,7 @@ const Services = () => {
               also to give satisfaction to our clients.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="relative w-screen  text-black py-10 mt-10">

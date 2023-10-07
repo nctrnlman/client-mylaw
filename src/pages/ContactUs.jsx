@@ -10,6 +10,8 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import woman from "../assets/woman_contact.png";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 function ContactUs() {
   return (
@@ -17,7 +19,13 @@ function ContactUs() {
       <Navbar />
       <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row mb-8">
-          <div className="flex-1 p-4 md:pb-7  mx-auto md:mx-0">
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex-1 p-4 md:pb-7  mx-auto md:mx-0"
+          >
             <div>
               <h2 className="text-3xl md:text-7xl  font-bold mb-2 md:mb-4 text-primary">
                 Get in Touch
@@ -85,15 +93,25 @@ function ContactUs() {
                 </button>
               </div>
             </div>
-          </div>
-          <img
+          </motion.div>
+          <motion.img
+            variants={fadeIn("left", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.3 }}
             src={woman}
             alt="Get in Touch"
             className="hidden md:block md:w-[40%] h-auto object-cover align-self-start"
           />
         </div>
 
-        <div className="mx-auto w-full gap-4 py-10 md:pt-20 p-4">
+        <motion.div
+          variants={fadeIn("up", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="mx-auto w-full gap-4 py-10 md:pt-20 p-4"
+        >
           <div className="gap-4 text-white p-4 flex flex-col-reverse md:flex-row shadow-lg w-full  mx-auto">
             <div className="w-full md:w-1/2 ">
               <iframe
@@ -140,9 +158,15 @@ function ContactUs() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col items-center py-20 gap-5 text-black">
+        <motion.div
+          variants={fadeIn("left", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col items-center py-20 gap-5 text-black"
+        >
           <div className=" p-4 pb-7 text-center">
             <h2 className="text-3xl md:text-5xl pb-2  font-bold text-primary">
               Unlocking Solutions for You
@@ -188,7 +212,7 @@ function ContactUs() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

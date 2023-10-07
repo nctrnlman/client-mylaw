@@ -5,9 +5,10 @@ import perikanan from "../assets/clients-logo/perikanan-indonesia.png";
 import pln from "../assets/clients-logo/pln.png";
 import tokio from "../assets/clients-logo/tokio.png";
 import trilogi from "../assets/clients-logo/trilogi.png";
-import logitech from "../assets/clients-logo/logitech.png";
 import Navbar from "../components/Navbar";
 import TestimonialCard from "../components/TestimonialCard";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 function Client() {
   const clientNamesA = [
@@ -89,7 +90,13 @@ function Client() {
     <div>
       <Navbar />
       <div className="  ">
-        <div className="flex flex-col  justify-between gap-4 max-w-7xl mx-auto container ">
+        <motion.div
+          variants={fadeIn("up", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col  justify-between gap-4 max-w-7xl mx-auto container "
+        >
           <div className="text-center md:text-left w-full  py-20">
             <h2 className="text-4xl md:text-7xl font-bold pb-6">
               <span className="text-black">Discover Our </span>
@@ -119,10 +126,16 @@ function Client() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         <div className="bg-primary text-white pb-[80px] pt-[80px] md:mt-[150px] ">
-          <div className=" mx-auto container px-4 ">
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.3 }}
+            className=" mx-auto container px-4 "
+          >
             <h2 className="text-4xl md:text-6xl text-center  font-bold mb-4 md:mb-8 pb-2 md:pb-5">
               Our Valued Clients
             </h2>
@@ -171,10 +184,16 @@ function Client() {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="p-10 pt-20 max-w-7xl mx-auto container ">
+        <motion.div
+          variants={fadeIn("down", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="p-10 pt-20 max-w-7xl mx-auto container "
+        >
           {/* <h2 className="text-4xl md:text-6xl text-center text-primary font-bold mb-4 md:mb-8 pb-2 md:pb-10">
             What Our Clients Say
           </h2> */}
@@ -190,7 +209,7 @@ function Client() {
               <TestimonialCard key={index} {...testimonial} />
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* <div className="flex flex-col md:flex-row pt-4 md:pt-20 items-center justify-around p-5">
           <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-4">
@@ -213,9 +232,15 @@ function Client() {
           </div>
         </div> */}
 
-        <div className="py-5 pb-10 px-5 max-w-7xl mx-auto container  ">
+        <motion.div
+          variants={fadeIn("right", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="py-5 pb-10 px-5 max-w-7xl mx-auto container  "
+        >
           <ContactUs />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
