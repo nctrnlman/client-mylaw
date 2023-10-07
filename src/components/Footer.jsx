@@ -11,7 +11,7 @@ function Footer() {
         </div>
 
         <nav className="text-white">
-          <header className="text-lg font-semibold ">Page</header>
+          {/* <header className="text-lg font-semibold ">Page</header> */}
           <a href="/" className="link link-hover">
             Home
           </a>
@@ -33,15 +33,22 @@ function Footer() {
         </nav>
 
         <div>
-          <span className="text-lg font-semibold">Our Location</span>
+          {/* <span className="text-lg font-semibold">Our Location</span> */}
           <p className="">
             Jalan Pengadegan Barat IV No.12A <br />
-            Pancoran, Jakarta Selatan
+            Pancoran, Jakarta Selatan <br />
+            Indonesia
           </p>
         </div>
 
         <div>
-          <span className="text-lg font-semibold">Social</span>
+          <p className="">Tel. +62 21 2953 2000, 521 2038</p>
+          <p className="">Fax. +62 21 521 2039</p>
+          <p className="">Email. mylaw@gmail.com</p>
+        </div>
+
+        <div>
+          {/* <span className="text-lg font-semibold">Social</span> */}
           <div className="grid grid-flow-col gap-4">
             <a
               href="https://www.linkedin.com/in/mylaw-id-039818270/"

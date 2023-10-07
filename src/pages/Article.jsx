@@ -3,6 +3,9 @@ import Image1 from "../assets/articles-img/article-1.jpeg";
 import Image2 from "../assets/articles-img/article-2.jpeg";
 import Image3 from "../assets/articles-img/article-3.jpeg";
 import { useState } from "react";
+import Pagination from "../components/Pagination";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 const newsArticles = [
   {
@@ -98,11 +101,29 @@ const newsArticles = [
 ];
 function Article() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
+  const articlesPerPage = 5;
 
+  // Filter articles based on the selected category
   const filteredArticles =
     selectedCategory === "All"
       ? newsArticles
       : newsArticles.filter((article) => article.category === selectedCategory);
+
+  // Calculate the total number of pages based on the number of articles and articlesPerPage
+  const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+
+  // Function to handle page changes
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
+
+  // Calculate the start index and end index for displaying articles
+  const startIndex = (currentPage - 1) * articlesPerPage;
+  const endIndex = startIndex + articlesPerPage;
+
+  // Slice the articles for the current page
+  const displayedArticles = filteredArticles.slice(startIndex, endIndex);
 
   return (
     <>
@@ -118,17 +139,29 @@ function Article() {
             animation: "gradientAnimation 5s linear infinite",
           }}
         >
-          <div className="text-white text-4xl font-bold absolute top-40 left-20 ">
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-white text-4xl md:text-7xl font-bold absolute top-40 left-20 "
+          >
             News & Insight
-          </div>
+          </motion.div>
         </div>
 
         {/* Category Section */}
-        <div className="py-4 text-center my-6 mx-56 rounded-lg">
+        <motion.div
+          variants={fadeIn("up", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="py-4 text-center my-6 mx-2 md:mx-56 rounded-lg"
+        >
           <h1 className="text-4xl font-semibold text-primary mb-2">
             Categories
           </h1>
-          <ul className="flex space-x-4 justify-center pt-2">
+          <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 justify-center pt-2">
             <li
               className={`text-primary hover:text-secondary cursor-pointer ${
                 selectedCategory === "All" ? "font-semibold" : ""
@@ -162,49 +195,75 @@ function Article() {
               Events
             </li>
           </ul>
-        </div>
-
+        </motion.div>
         {/* News Articles */}
-        <div className="container mx-auto py-6 mt-4">
-          {filteredArticles.map((article) => (
+        <motion.div
+          variants={fadeIn("down", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="container mx-auto py-6 mt-4"
+        >
+          {displayedArticles.map((article) => (
             <div key={article.id} className="mb-8">
               <div className="flex flex-wrap justify-center items-center">
-                {/* Left Column - Image */}
-                <div className="w-full md:w-1/5 p-2 relative">
-                  <div
-                    className="relative overflow-hidden"
-                    style={{
-                      paddingBottom: "56.25%", // 16:9 aspect ratio (9 / 16 * 100%)
-                    }}
-                  >
-                    <img
-                      src={article.image}
-                      alt="Article Image"
-                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform hover:scale-105"
-                    />
+                {/* Card Container */}
+                <div className="w-full md:w-4/5 p-2 relative md:flex rounded-lg shadow-lg">
+                  {/* Left Column - Image */}
+                  <div className="w-full md:w-1/2 h-36 md:h-auto relative max-w-md">
+                    <div
+                      className="relative overflow-hidden h-full"
+                      style={{
+                        paddingBottom: "0", // Remove the paddingBottom
+                      }}
+                    >
+                      <img
+                        src={article.image}
+                        alt="Article Image"
+                        className="absolute top-0 left-0 w-full h-full object-cover object-center transition-transform hover:scale-105 rounded-lg"
+                        style={{
+                          objectFit: "cover", // Add objectFit property
+                          width: "100%",
+                          height: "100%",
+                        }}
+                      />
+                    </div>
                   </div>
-                </div>
 
-                {/* Right Column - Article Content */}
-                <div className="w-full md:w-1/2 p-4">
-                  <h1 className="text-2xl font-bold text-blue mb-2">
-                    {article.title}
-                  </h1>
-                  <p className="text-blue mb-2">{article.date}</p>
-                  <div className="mt-2 text-justify">
-                    <p>{article.content}</p>
+                  {/* Right Column - Article Content */}
+                  <div className="w-full md:w-1/2 p-4 bg-white rounded-r-lg">
+                    <h1 className="text-2xl font-bold text-blue mb-2">
+                      {article.title}
+                    </h1>
+                    <p className="text-blue mb-2">{article.date}</p>
+                    <div className="mt-2 text-justify">
+                      <p>{article.content}</p>
+                    </div>
+                    <a
+                      href={`/article/${article.id}`}
+                      className="inline-flex items-center justify-center bg-primary text-white hover:bg-secondary hover:text-white border rounded mt-2 py-2 px-4 text-[15px]"
+                    >
+                      Read More
+                    </a>
                   </div>
-                  <a
-                    href={`/news-article/${article.id}`} // Use the appropriate route
-                    className="btn btn-primary mt-3"
-                  >
-                    Read More
-                  </a>
                 </div>
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
+        <motion.div
+          variants={fadeIn("left", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex justify-center"
+        >
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
+        </motion.div>
       </div>
     </>
   );
