@@ -114,47 +114,54 @@ const Services = () => {
   return (
     <>
       <Navbar />
-      <section className="min-h-[calc(100vh-7rem)] grid grid-cols-2 max-w-7xl mx-auto items-center gap-10">
-        <div>
-          <h1
-            className="relative mb-7 text-primary text-5xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-1/2 before:border-t-2
-					 before:border-primary"
-          >
-            Mylaw's Services
-          </h1>
-          <p className="my-10 text-lg">
-            At Mylaw, we specialize in a wide range of practice areas, ensuring
-            that we can address your legal concerns effectively. Whether you are
-            an individual, a small business, or a large corporation, our team is
-            ready to assist you in profuse areas:
-          </p>
-          <a
-            href=""
-            className="btn btn-outline btn-secondary hover:pr-10 group transition-all rounded-none"
-          >
-            Read More
-            <span className="group-hover:translate-x-4 transition-all">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-6 h-6"
+      <div
+        className="hero min-h-[calc(100vh-7rem)]"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-80"></div>
+
+        <div className="hero-content text-neutral-focus">
+          <div className="max-w-7xl">
+            <div>
+              <h1
+                className="relative mb-7 text-secondary text-5xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-1/2 before:border-t-2
+					 before:border-secondary"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </span>
-          </a>
+                Mylaw's Services
+              </h1>
+              <p className="my-10 text-lg text-secondary">
+                At Mylaw, we specialize in a wide range of practice areas,
+                ensuring that we can address your legal concerns effectively.
+                Whether you are an individual, a small business, or a large
+                corporation, our team is ready to assist you in profuse areas:
+              </p>
+              <a
+                href=""
+                className="btn btn-secondary hover:pr-10 group transition-all rounded-none"
+              >
+                Read More
+                <span className="group-hover:translate-x-4 transition-all">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-          alt=""
-          className="w-full h-full object-cover object-center"
-        />
-      </section>
+      </div>
 
       <div className="py-28 px-2 max-w-7xl mx-auto">
         <div className="mb-10 flex justify-center items-center">

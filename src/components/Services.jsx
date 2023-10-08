@@ -2,9 +2,9 @@ import ServiceLogo from "./ServiceLogo";
 
 const servicesData = [
   {
-    name: "Corporate",
+    name: "Corporate Legal",
     description:
-      "Comprehensive support for your business in Indonesia, including corporate matters, licenses, compliance, IP, HR, taxes, and more.",
+      " Comprehensive support for your business in Indonesia, including incorporation, corporate secretary matters, business compliance (annual obligation, etc), intellectual property, manpower, taxes, and more.",
     logo: "corporate",
   },
   {
@@ -14,7 +14,7 @@ const servicesData = [
     logo: "license",
   },
   {
-    name: "Commercial",
+    name: "Commercial Law",
     description:
       "Handling a spectrum of commercial disputes and M&A transactions, including complex state-owned enterprise takeovers.",
     logo: "commercial",
@@ -28,7 +28,7 @@ const servicesData = [
   {
     name: "Restructuring, Turnaround, and Insolvency",
     description:
-      "We're your trusted partner for efficient commercial debt collection. You only pay when we succeed, preserving your customer relationships.",
+      "We are your trusted partner for efficient commercial debt collection. You only pay when we succeed, preserving your customer relationships.",
     logo: "turnaround",
   },
 ];
@@ -38,7 +38,8 @@ const Services = () => {
     <div
       className="hero min-h-screen"
       style={{
-        backgroundImage: "url(./src/assets/img-service.jpg)",
+        backgroundImage:
+          "url(https://images.unsplash.com/photo-1505664063603-28e48ca204eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80)",
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
