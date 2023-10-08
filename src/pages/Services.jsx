@@ -124,9 +124,9 @@ const Services = () => {
           </h1>
           <p className="my-10 text-lg">
             At Mylaw, we specialize in a wide range of practice areas, ensuring
-            that we can address your legal concerns effectively. Whether you're
+            that we can address your legal concerns effectively. Whether you are
             an individual, a small business, or a large corporation, our team is
-            ready to assist you in the following areas:
+            ready to assist you in profuse areas:
           </p>
           <a
             href=""

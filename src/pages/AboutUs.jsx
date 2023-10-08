@@ -114,8 +114,8 @@ const Services = () => {
           </h1>
           <p className=" md:text-lg mb-4 text-justify">
             At Mylaw, we pride ourselves on being your go-to legal consultants,
-            ready to cater to all your legal needs. In just one year since our
-            inception, we've achieved an astounding success rate of over 99.8%
+            ready to cater to all your legal needs. Since the first year of our inception,
+            we've achieved an astounding success rate of over 99.8%
             in settling cases, leaving our clients with 100% satisfaction. Our
             combined professional and success fees have exceeded seven hundred
             sixty-five million rupiah, thanks to our expert handling of both
