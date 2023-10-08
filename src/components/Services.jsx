@@ -2,9 +2,9 @@ import ServiceLogo from "./ServiceLogo";
 
 const servicesData = [
   {
-    name: "Corporate",
+    name: "Corporate Legal",
     description:
-      "Comprehensive support for your business in Indonesia, including corporate matters, licenses, compliance, IP, HR, taxes, and more.",
+      " Comprehensive support for your business in Indonesia, including incorporation, corporate secretary matters, business compliance (annual obligation, etc), intellectual property, manpower, taxes, and more.",
     logo: "corporate",
   },
   {
@@ -14,7 +14,7 @@ const servicesData = [
     logo: "license",
   },
   {
-    name: "Commercial",
+    name: "Commercial Law",
     description:
       "Handling a spectrum of commercial disputes and M&A transactions, including complex state-owned enterprise takeovers.",
     logo: "commercial",
@@ -28,7 +28,7 @@ const servicesData = [
   {
     name: "Restructuring, Turnaround, and Insolvency",
     description:
-      "We're your trusted partner for efficient commercial debt collection. You only pay when we succeed, preserving your customer relationships.",
+      "We are your trusted partner for efficient commercial debt collection. You only pay when we succeed, preserving your customer relationships.",
     logo: "turnaround",
   },
 ];
