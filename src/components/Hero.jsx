@@ -9,7 +9,7 @@ const Hero = () => {
           </h1>
           <p className="mb-14">Your Trusted Path to Legal Victory</p>
           <div className="w-max mx-auto group transition-all relative">
-            <a href="#aboutUs" className="btn btn-outline btn-secondary rounded-none">
+            <a href="#aboutUs" className="btn btn-secondary rounded-none">
               Start Winning Today
             </a>
             <span className="absolute top-1/2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-10 transition-all">
