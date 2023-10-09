@@ -16,7 +16,7 @@ const servicesData = [
   {
     name: "Commercial Law",
     description:
-      "Handling a spectrum of commercial disputes and M&A transactions, including complex state-owned enterprise takeovers.",
+      "Handling a spectrum of commercial disputes and Merger and Acquisition transactions, including complex state-owned enterprise takeovers.",
     logo: "commercial",
   },
   {
@@ -49,7 +49,7 @@ const Services = () => {
           <div className="grid grid-cols-5 grid-rows-1 gap-5">
             {servicesData.map((service) => (
               <div className="card w-full glass" key={service.name}>
-                <figure className="w-min p-5 rounded-full mx-auto bg-primary -mt-10">
+                <figure className="w-min p-5 rounded-full mx-auto bg-primary -mt-10 text-secondary">
                   <ServiceLogo logo={service.logo} />
                 </figure>
                 <div className="card-body -mt-6">

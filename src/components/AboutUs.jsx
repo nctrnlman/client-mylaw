@@ -18,9 +18,12 @@ const AboutUs = () => {
         </p>
         <p className="mb-10">
           With significant experiences in corporate, commercial, civil law, and
-          debt recovery, we are known for safeguarding the rights and interests of landlords and tenants, businesses of all sizes, private foundations,
-          individuals, and families menjadi we are known for safeguarding the rights and interests of landlords and tenants, entreprises of all sizes,
-          private foundations, individuals, and families.
+          debt recovery, we are known for safeguarding the rights and interests
+          of landlords and tenants, businesses of all sizes, private
+          foundations, individuals, and families menjadi we are known for
+          safeguarding the rights and interests of landlords and tenants,
+          entreprises of all sizes, private foundations, individuals, and
+          families.
         </p>
         <a
           href=""
@@ -43,7 +46,7 @@ const AboutUs = () => {
           </span>
         </a>
       </div>
-      <img src={aboutUsImg} alt="" className="w-1/2 justify-self-center" />
+      <img src={aboutUsImg} alt="" className="w-1/2 justify-self-end" />
     </div>
   );
 };
