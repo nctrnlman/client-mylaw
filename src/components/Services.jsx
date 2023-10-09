@@ -56,7 +56,7 @@ const Services = () => {
                   <h2 className="card-title justify-center min-h-[5rem]">
                     {service.name}
                   </h2>
-                  <p className="text-sm text-gray-300 text-justify">
+                  <p className="text-sm text-gray-300 text-center">
                     {service.description}
                   </p>
                 </div>
