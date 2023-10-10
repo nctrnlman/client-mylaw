@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import WhatsApp from "./components/WhatsAppButton";
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import Client from "./pages/Client";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/article" element={<Article />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
       </Routes>
+      <WhatsApp />
       <Footer />
     </div>
   );

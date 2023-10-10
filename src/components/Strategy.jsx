@@ -9,12 +9,48 @@ const Strategy = () => {
             Strong Points
           </h2>
         </div>
-        <div className="grid grid-cols-1 grid-rows-1 place-content-center">
-          <img
-            src={strategySteps}
-            alt="strategy steps"
-            className="w-full h-auto object-contain object-center"
-          />
+        <div className="grid grid-cols-4 gap-5 justify-items-center grid-rows-2 text-center">
+          <div className="card w-full bg-primary text-primary-content">
+            <div className="card-body">
+              <h3 className="card-title justify-center">Professional</h3>
+              <p className="text-sm text-gray-300">
+                We behave with our highes degree of integrity, courtesy, and
+                skill with our clients
+              </p>
+            </div>
+          </div>
+          <div className="card w-full bg-primary text-primary-content">
+            <div className="card-body">
+              <h3 className="card-title justify-center">Experienced</h3>
+              <p className="text-sm text-gray-300">
+                We are proven to handle your legal needs based on your business
+                interest. 99% of our clients is commercial companies, therefore
+                we think and act as same as our client. We highly maintain good
+                reputation of our clients as well as prevent unnecessary cost
+                and fee.
+              </p>
+            </div>
+          </div>
+          <div className="card w-full bg-primary text-primary-content">
+            <div className="card-body">
+              <h3 className="card-title justify-center">Trustworthy</h3>
+              <p className="text-sm text-gray-300">
+                We are trustworthy for your legal needs. Dont worry about the
+                result we are already handling more than 50 clients.
+              </p>
+            </div>
+          </div>
+          <div className="card w-full bg-primary text-primary-content">
+            <div className="card-body">
+              <h3 className="card-title justify-center">
+                Efficient & Efective
+              </h3>
+              <p className="text-sm text-gray-300">
+                We work efficient and efectively. No need to worry about adding
+                fees, without adding fees we work efficient & efectively.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

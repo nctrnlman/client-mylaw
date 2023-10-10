@@ -10,17 +10,20 @@ const AboutUs = () => {
         <h2 className="text-4xl font-bold mb-5">About Us</h2>
         <p className="mb-4">
           At Mylaw, we are your perfect and most trusted legal consultants,
-          dedicated to addressing all your legal needs. In just one year since
+          dedicated to assisting all your legal needs. In just one year since
           our inception, we've achieved an impressive track record—settling over
           99.8% of cases and ensuring 100% client satisfaction, with a total
           contract value exceeding seven hundred sixty-five million rupiah. Our
           success stories span non-litigation and litigation procedures.
         </p>
         <p className="mb-10">
-          With significant experience in corporate, commercial, civil law, and
+          With significant experiences in corporate, commercial, civil law, and
           debt recovery, we are known for safeguarding the rights and interests
           of landlords and tenants, businesses of all sizes, private
-          foundations, individuals, and families.
+          foundations, individuals, and families menjadi we are known for
+          safeguarding the rights and interests of landlords and tenants,
+          entreprises of all sizes, private foundations, individuals, and
+          families.
         </p>
         <a
           href=""
@@ -43,7 +46,7 @@ const AboutUs = () => {
           </span>
         </a>
       </div>
-      <img src={aboutUsImg} alt="" className="w-1/2 justify-self-center" />
+      <img src={aboutUsImg} alt="" className="w-1/2 justify-self-end" />
     </div>
   );
 };

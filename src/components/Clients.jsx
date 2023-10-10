@@ -33,7 +33,7 @@ const Clients = () => {
               />
             </svg>
           </Link>
-          <span className="text-xs text-primary">See All</span>
+          <span className="text-sm text-primary">See All</span>
         </div>
       </div>
     </div>
