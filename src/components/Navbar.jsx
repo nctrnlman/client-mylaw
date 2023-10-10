@@ -65,27 +65,55 @@ const Navbar = () => {
             className="menu menu-sm -translate-x-[75%] dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link className="" to="/about-us">
+              <Link
+                className="text-gray-800 hover:font-semibold transition duration-300 ease-in-out"
+                to="/"
+              >
+                Home
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                className="text-gray-800 hover:font-semibold transition duration-300 ease-in-out"
+                to="/about-us"
+              >
                 About
               </Link>
             </li>
+
             <li>
-              <Link className="" to="/services">
+              <Link
+                className="text-gray-800 hover:font-semibold transition duration-300 ease-in-out"
+                to="/services"
+              >
                 Services
               </Link>
             </li>
             <li>
-              <Link className="" to="/client">
+              <Link
+                className="text-gray-800 hover:font-semibold transition duration-300 ease-in-out"
+                to="/client"
+              >
                 Our Clients
               </Link>
             </li>
             <li>
-              <Link className="" to="/article">
+              <Link
+                className="text-gray-800 hover:font-semibold transition duration-300 ease-in-out"
+                to="/article"
+              >
                 News & Insight
               </Link>
             </li>
+
+            <li className="mx-2 text-gray-500">|</li>
+
             <li>
-              <Link className="" to="/contact-us">
+              <Link
+                className="text-gray-800 hover:font-semibold transition duration-300 ease-in-out"
+                to="/contact-us"
+              >
                 Contact Us
               </Link>
             </li>

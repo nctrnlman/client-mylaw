@@ -10,96 +10,89 @@ const Services = () => {
   return (
     <>
       <Navbar />
-      {/* <div className="relative flex ">
-        <div className="py-11 flex flex-col justify-center max-w-7xl mx-auto text-black z-10 px-8">
-          <div className="text-3xl md:text-7xl font-bold mb-10  ">
 
-            <span className="">Who Are </span>
-            <span className="text-primary">We?</span>
-          </div>
-          <p className="text-lg  mb-4">
-            At MyLaw, we pride ourselves on being your go-to legal consultants,
-            ready to cater to all your legal needs. In just one year Since the
-            first year of our incorporation, we've achieved an astounding
-            success rate of over 99.8% in settling cases, leaving our clients
-            with 100% satisfaction. Our combined professional and success fees
-            have exceeded seven hundred sixty-five million rupiah, thanks to our
-            expert handling of both non-litigation and litigation procedures.
-          </p>
-          <p className="text-lg  mb-4">
-            Our team at MyLaw is composed of seasoned lawyers who have been
-            deeply immersed in the world of corporate and commercial law, debt
-            recovery, as well as civil and criminal litigation since 2014.
-            Throughout our journey, we've earned the trust of over 120 clients
-            who have entrusted us with the responsibility of arbitrating and
-            mediating their cases, leading to consistently favorable outcomes.
-          </p>
-          <p className="text-lg  mb-4">
-            Our lawyers have honed their legal skills across Indonesia and are
-            recognized by esteemed institutions such as the Indonesian Advocates
-            Association (Perhimpunan Advokat Indonesia - PERADI) and the
-            Indonesian Lawyers Association (Asosiasi Advokat Indonesia - AAI).
-          </p>
-          <p className="text-lg  mb-4">
-            With our extensive expertise in corporate, commercial, civil law,
-            and debt recovery, MyLaw is the preferred choice for landlords,
-            tenants, businesses of all sizes, private foundations, individuals,
-            and families seeking to safeguard their rights and interests. We're
-            here to stand by your side and provide the legal support you need.
-          </p>
-        </div>
-        <div className="relative w-[2200px]">
-          <div className="absolute inset-0 bg-primary opacity-60 w-[100%]"></div>
-          <img
-            src={aboutHero}
-            alt="MyLaw.id Team"
-            className="w-[100%] h-full object-cover"
-          />
-        </div>
-      </div> */}
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
-        className="relative h-screen flex items-center bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${aboutHero})`,
-          backgroundColor: "##000000",
-        }}
+      <div
+        className="hero min-h-[calc(100vh-7rem)] relative"
+        style={{ backgroundImage: `url(${aboutHero})` }}
       >
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="max-w-7xl mx-auto text-center lg:text-left text-white z-10">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-secondary">
-            Discover Our Firm's Essence
-          </h2>
-          <p className="text-lg md:text-xl mb-6">
-            Explore the core of our organization, where a dedication to
-            excellence and a visionary outlook define the essence of our firm.
-          </p>
-          <a
-            href="/contact-us"
-            className="btn  btn-secondary hover:pr-10 group transition-all rounded-none"
-          >
-            Get in Touch
-            <span className="group-hover:translate-x-4 transition-all">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-6 h-6"
+        <div className="hero-overlay bg-opacity-80"></div>
+        <div className="hero-content text-neutral-focus">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-left">
+              <h1 className="relative mb-7 text-secondary text-4xl lg:text-7xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-1/2 before:border-t-2 before:border-secondary">
+                About Mylaw
+              </h1>
+              <p className="mt-8 mb-5 md:text-lg text-white">
+                Welcome to Mylaw, where legal expertise meets unwavering
+                commitment. At Mylaw, we are more than just a law firm. we are
+                your trusted partners in navigating the complexities of the
+                legal landscape. Our dedicated team is driven by a shared vision
+                and mission to provide exceptional legal services tailored to
+                your unique needs.
+              </p>
+
+              <a
+                href="/contact-us"
+                className="btn  btn-secondary hover:pr-10 group transition-all rounded-none"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </span>
-          </a>
+                Get in Touch
+                <span className="group-hover:translate-x-4 transition-all">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
-      </motion.div>
+      </div>
+
+      {/*  <div className="hero-content text-neutral-focus">
+          <div className="max-w-7xl">
+            <div>
+              <h1
+                className="relative mb-7 text-secondary text-7xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-1/2 before:border-t-2
+					 before:border-secondary"
+              >
+                Discover Our Firm's Essence
+              </h1>
+              <p className="mt-8 mb-5 text-lg text-white">
+                Explore the core of our organization, where a dedication to
+                excellence and a visionary outlook define the essence of our
+                firm.
+              </p>
+              <a
+                href="/contact-us"
+                className="btn  btn-secondary hover:pr-10 group transition-all rounded-none"
+              >
+                Get in Touch
+                <span className="group-hover:translate-x-4 transition-all">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div> */}
 
       <motion.div
         variants={fadeIn("right", 0.3)}
@@ -114,8 +107,8 @@ const Services = () => {
           </h1>
           <p className=" md:text-lg mb-4 text-justify">
             At Mylaw, we pride ourselves on being your go-to legal consultants,
-            ready to cater to all your legal needs. Since the first year of our inception,
-            we've achieved an astounding success rate of over 99.8%
+            ready to cater to all your legal needs. Since the first year of our
+            inception, we've achieved an astounding success rate of over 99.8%
             in settling cases, leaving our clients with 100% satisfaction. Our
             combined professional and success fees have exceeded seven hundred
             sixty-five million rupiah, thanks to our expert handling of both
