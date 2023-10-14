@@ -12,7 +12,7 @@ const Services = () => {
       <Navbar />
 
       <div
-        className="hero min-h-[calc(100vh-7rem)] relative"
+        className="hero min-h-screen relative"
         style={{ backgroundImage: `url(${aboutHero})` }}
       >
         <div className="hero-overlay bg-opacity-80"></div>
@@ -55,44 +55,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-
-      {/*  <div className="hero-content text-neutral-focus">
-          <div className="max-w-7xl">
-            <div>
-              <h1
-                className="relative mb-7 text-secondary text-7xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-1/2 before:border-t-2
-					 before:border-secondary"
-              >
-                Discover Our Firm's Essence
-              </h1>
-              <p className="mt-8 mb-5 text-lg text-white">
-                Explore the core of our organization, where a dedication to
-                excellence and a visionary outlook define the essence of our
-                firm.
-              </p>
-              <a
-                href="/contact-us"
-                className="btn  btn-secondary hover:pr-10 group transition-all rounded-none"
-              >
-                Get in Touch
-                <span className="group-hover:translate-x-4 transition-all">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div> */}
 
       <motion.div
         variants={fadeIn("right", 0.3)}
