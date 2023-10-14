@@ -99,7 +99,7 @@ function ArticleDetail() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-7xl mt-[200px]">
         {/* Article Banner */}
         <div className="mb-6 overflow-hidden rounded-lg">
           <img

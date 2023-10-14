@@ -131,7 +131,7 @@ function Article() {
       <div className="relative">
         {/* Header Banner */}
         <div
-          className="w-full h-96 relative"
+          className="w-full h-[50vh] mt-[100px] relative"
           style={{
             backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), transparent, transparent, transparent)`,
             backgroundColor: `#005289`,

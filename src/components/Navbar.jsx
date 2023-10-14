@@ -1,9 +1,39 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(true);
+
+  const path = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isTop = window.scrollY < 100;
+      if (isTop !== scrolled) {
+        setScrolled(isTop);
+      }
+    };
+
+    if (path.pathname == "/") {
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      setScrolled(false);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
+
   return (
-    <div className="navbar bg-base-100">
+    <div
+      className="navbar fixed z-[999] px-5 p-0"
+      style={{
+        transition: "all",
+        background: scrolled ? "transparent" : "#f4f4fa",
+      }}
+    >
       <div className="navbar-start">
         <Link to="/" className="normal-case cursor-pointer">
           <img
@@ -14,29 +44,56 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 items-center gap-5">
           <li>
-            <Link className="" to="/about-us">
+            <Link
+              className="relative active:bg-primary before:content-[''] before:absolute before:bottom-0 before:transition-all before:left-0 before:h-1 before:rounded-full before:w-0 hover:before:w-full before:bg-primary hover:bg-transparent"
+              style={{
+                fontWeight: path.pathname == "/about-us" ? "600" : "400",
+              }}
+              to="/about-us"
+            >
               About
             </Link>
           </li>
           <li>
-            <Link className="" to="/services">
+            <Link
+              className="relative active:bg-primary before:content-[''] before:absolute before:bottom-0 before:transition-all before:left-0 before:h-1 before:rounded-full before:w-0 hover:before:w-full before:bg-primary hover:bg-transparent"
+              style={{
+                fontWeight: path.pathname == "/services" ? "600" : "400",
+              }}
+              to="/services"
+            >
               Services
             </Link>
           </li>
           <li>
-            <Link className="" to="/client">
+            <Link
+              className="relative active:bg-primary before:content-[''] before:absolute before:bottom-0 before:transition-all before:left-0 before:h-1 before:rounded-full before:w-0 hover:before:w-full before:bg-primary hover:bg-transparent"
+              style={{
+                fontWeight: path.pathname == "/client" ? "600" : "400",
+              }}
+              to="/client"
+            >
               Our Clients
             </Link>
           </li>
           <li>
-            <Link className="" to="/article">
+            <Link
+              className="relative active:bg-primary before:content-[''] before:absolute before:bottom-0 before:transition-all before:left-0 before:h-1 before:rounded-full before:w-0 hover:before:w-full before:bg-primary hover:bg-transparent"
+              style={{
+                fontWeight: path.pathname == "/article" ? "600" : "400",
+              }}
+              to="/article"
+            >
               News & Insight
             </Link>
           </li>
           <li>
-            <Link className="" to="/contact-us">
+            <Link
+              className="bg-primary text-white hover:bg-primary-focus hover:text-white rounded-full"
+              to="/contact-us"
+            >
               Contact Us
             </Link>
           </li>

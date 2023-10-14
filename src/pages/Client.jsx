@@ -89,7 +89,7 @@ function Client() {
   return (
     <div>
       <Navbar />
-      <div className="  ">
+      <div>
         <motion.div
           variants={fadeIn("up", 0.3)}
           initial="hidden"
@@ -97,7 +97,7 @@ function Client() {
           viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col  justify-between gap-4 max-w-7xl mx-auto container "
         >
-          <div className="text-center md:text-left w-full  py-20">
+          <div className="text-center md:text-left w-full mt-[100px] py-20">
             <h2 className="text-4xl md:text-7xl font-bold pb-6">
               <span className="text-black">Discover Our </span>
               <span className="text-primary">Clients</span>
