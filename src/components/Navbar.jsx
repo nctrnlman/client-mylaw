@@ -45,7 +45,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 items-center gap-5">
+          <ul className="menu flex-nowrap menu-horizontal px-1 items-center gap-5">
             <li>
               <Link
                 className="relative active:bg-primary before:content-[''] before:absolute before:bottom-0 before:transition-all before:left-0 before:h-1 before:rounded-full before:w-0 hover:before:w-full before:bg-primary hover:bg-transparent"
@@ -121,7 +121,7 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-lg w-screen dropdown-content left-0 z-[1] p-2 pt-[5.5rem] shadow bg-base-100"
+        className="menu menu-lg w-screen dropdown-content lg:hidden left-0 z-[1] p-2 pt-[5.5rem] shadow bg-base-100"
       >
         <li>
           <Link
