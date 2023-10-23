@@ -1,4 +1,7 @@
+import Slider from "react-slick";
 import ServiceLogo from "./ServiceLogo";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const servicesData = [
   {
@@ -40,6 +43,15 @@ const servicesData = [
 ];
 
 const Services = () => {
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
+  };
+
   return (
     <div
       className="hero min-h-screen"
@@ -48,14 +60,15 @@ const Services = () => {
           "url(https://images.unsplash.com/photo-1505664063603-28e48ca204eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80)",
       }}
     >
-      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-overlay bg-opacity-90"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-7xl mx-auto py-2 flex flex-col justify-center items-center">
           <h2 className="mb-16 text-5xl font-bold">Our Expertise</h2>
+
           <div className="grid grid-cols-3 grid-rows-2 gap-5">
             {servicesData.map((service) => (
-              <div className="card w-full glass mb-8" key={service.name}>
-                <figure className="w-min p-5 rounded-full mx-auto bg-primary -mt-10 text-secondary">
+              <div className="card w-full h-68 glass mb-8" key={service.name}>
+                <figure className="w-min p-5 rounded-full mx-auto bg-primary -mt-10 text-white">
                   <ServiceLogo logo={service.logo} />
                 </figure>
                 <div className="card-body -mt-6">
