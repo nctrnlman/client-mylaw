@@ -1,9 +1,21 @@
 import aboutUsImg from "../assets/img-about_us.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const AboutUs = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    innerWidth: 100,
+  };
+
   return (
     <div
-      className="max-w-7xl px-2 py-16 grid grid-cols-2 items-center gap-5 mx-auto"
+      className="max-w-7xl py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-10 mx-auto px-5"
       id="aboutUs"
     >
       <div>
@@ -46,7 +58,22 @@ const AboutUs = () => {
           </span>
         </a>
       </div>
-      <img src={aboutUsImg} alt="" className="w-1/2 justify-self-end" />
+      <Slider {...settings}>
+        <div>
+          <img
+            src={aboutUsImg}
+            alt=""
+            className="w-full h-[35rem] object-cover object-center"
+          />
+        </div>
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+            alt=""
+            className="w-full h-[35rem] object-cover object-center"
+          />
+        </div>
+      </Slider>
     </div>
   );
 };
