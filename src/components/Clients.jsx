@@ -11,7 +11,7 @@ const Clients = () => {
           Strong Clients
         </h2>
       </div>
-      <div className="grid grid-cols-4 gap-5 grid-rows-1 items-center justify-center">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 grid-rows-1 items-center justify-center">
         <img src={hokben} alt="" className="w-1/2 h-auto mx-auto" />
         <img src={perikanan} alt="" className="w-1/2 h-auto mx-auto" />
         <img src={pln} alt="" className="w-1/2 h-auto mx-auto" />

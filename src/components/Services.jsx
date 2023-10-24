@@ -43,15 +43,6 @@ const servicesData = [
 ];
 
 const Services = () => {
-  const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    speed: 500,
-  };
-
   return (
     <div
       className="hero min-h-screen"
@@ -65,7 +56,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto py-2 flex flex-col justify-center items-center">
           <h2 className="mb-16 text-5xl font-bold">Our Expertise</h2>
 
-          <div className="grid grid-cols-3 grid-rows-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-5">
             {servicesData.map((service) => (
               <div className="card w-full h-68 glass mb-8" key={service.name}>
                 <figure className="w-min p-5 rounded-full mx-auto bg-primary -mt-10 text-white">

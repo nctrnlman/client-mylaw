@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div className="dropdown flex">
       <div
-        className="navbar fixed z-[999] px-5 p-0"
+        className="navbar  z-[999] px-5 p-0"
         style={{
           transition: "all",
           background: scrolled ? "transparent" : "#f4f4fa",

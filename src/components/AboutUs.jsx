@@ -15,7 +15,7 @@ const AboutUs = () => {
 
   return (
     <div
-      className="max-w-7xl px-2 py-16 grid grid-cols-2 items-center gap-10 mx-auto"
+      className="max-w-7xl py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-10 mx-auto px-5"
       id="aboutUs"
     >
       <div>
