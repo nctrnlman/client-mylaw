@@ -17,7 +17,7 @@ function ContactUs() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto max-w-7xl mt-[200px]">
+      <div className="container mx-auto max-w-7xl md:mt-[170px] mt-[100px]">
         <div className="flex flex-col md:flex-row mb-8">
           <motion.div
             variants={fadeIn("right", 0.3)}
@@ -105,13 +105,7 @@ function ContactUs() {
           />
         </div>
 
-        <motion.div
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
-          className="mx-auto w-full gap-4 py-10 md:pt-20 p-4"
-        >
+        <div className="mx-auto w-full gap-4 py-10 md:pt-20 p-4">
           <div className="gap-4 text-white p-4 flex flex-col-reverse md:flex-row shadow-lg w-full  mx-auto">
             <div className="w-full md:w-1/2 ">
               <iframe
@@ -149,7 +143,7 @@ function ContactUs() {
                 </p>
                 <p className="flex items-center text-lg">
                   <FaPhone className="h-6 w-6 mr-2 text-primary" />
-                  0812-1111-0564
+                  +62 812 1111 0564, +62 878 6588 7051
                 </p>
                 <p className="flex items-center text-lg">
                   <FaEnvelope className="h-6 w-6 mr-2 text-primary" />
@@ -158,15 +152,9 @@ function ContactUs() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          variants={fadeIn("left", 0.3)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
-          className="flex flex-col items-center py-20 gap-5 text-black"
-        >
+        <div className="flex flex-col items-center py-20 gap-5 text-black">
           <div className=" p-4 pb-7 text-center">
             <h2 className="text-3xl md:text-5xl pb-2  font-bold text-primary">
               Unlocking Solutions for You
@@ -180,22 +168,23 @@ function ContactUs() {
           <div className="flex flex-col md:flex-row justify-between">
             <div className="w-full md:w-1/3 p-4 text-center flex flex-col gap-4">
               <FaHandsHelping size={64} className="mb-4 mx-auto text-primary" />
-              <h2 className="text-lg md:text-2xl  font-semibold text-black">
+              <h2 className="text-xl md:text-2xl  font-semibold text-black">
                 Reach Out to Us
               </h2>
-              <p className="md:text-lg pt-2">
+              <p className="md:text-lg text-lg pt-2">
                 Take the first step with a free case review. Engage in our chat,
                 or simply fill out our form.
               </p>
             </div>
             <div className="w-full md:w-1/3 p-4 text-center flex flex-col gap-4">
               <FaGavel size={64} className="mb-4 mx-auto text-primary" />
-              <h2 className="text-lg md:text-2xl  font-semibold text-black">
+              <h2 className="text-xl md:text-2xl  font-semibold text-black">
                 Crafting Your Legal Strategy
               </h2>
-              <p className="md:text-lg pt-2">
-                While you focus on your family, we diligently gather evidence
-                and build a robust case on your behalf.
+              <p className="md:text-lg text-lg pt-2">
+                While you focus on your businesses and individuals, we
+                diligently gather evidence and build a robust case on your
+                behalf.
               </p>
             </div>
             <div className="w-full md:w-1/3 p-4 text-center flex flex-col gap-4">
@@ -203,16 +192,16 @@ function ContactUs() {
                 size={64}
                 className="mb-4 mx-auto text-primary"
               />
-              <h2 className="text-lg md:text-2xl font-semibold">
+              <h2 className="text-xl md:text-2xl font-semibold">
                 Compensation Awaits
               </h2>
-              <p className="md:text-lg pt-2">
+              <p className="md:text-lg text-lg pt-2">
                 Join the countless families we’ve assisted in securing billions
                 in settlements and verdicts.
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </>
   );

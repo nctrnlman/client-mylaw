@@ -1,12 +1,16 @@
 import { FaLinkedin, FaInstagram, FaEnvelope, FaYoutube } from "react-icons/fa";
-import mylawLogo from "../assets/mylaw_logo.png";
+import mylawLogo from "../assets/footer-logo.png";
 
 function Footer() {
   return (
     <footer className="flex-row  p-10  text-white bg-[#005289] ">
       <div className="footer pb-4 max-w-7xl mx-auto">
         <div>
-          <img src={mylawLogo} alt="MyLaw Logo" width="80px" />
+          <img
+            src={mylawLogo}
+            alt="MyLaw Logo"
+            className="md:w-[85px] w-[80px] scale-150"
+          />
           <p className="">Providing Legal Support since 2022</p>
         </div>
 
@@ -42,8 +46,7 @@ function Footer() {
         </div>
 
         <div>
-          <p className="">Tel. +62 21 2953 2000, 521 2038</p>
-          <p className="">Fax. +62 21 521 2039</p>
+          <p className="">Tel. +62 812 1111 0564, +62 878 6588 7051</p>
           <p className="">Email. mylaw@gmail.com</p>
         </div>
 

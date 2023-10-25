@@ -43,7 +43,11 @@ function Client() {
     "PT. Putra Damai Abadi",
     "PT. Wahana Tata",
   ];
-  const clientNamesE = ["Schneider Group", "Logitech Singapore Pte, Ltd."];
+  const clientNamesE = [
+    "Schneider Group",
+    "Logitech Singapore Pte, Ltd.",
+    "Galderma Singapore Pte, Ltd.",
+  ];
 
   const logos = [hokben, trilogi, pln, tokio];
 
@@ -129,13 +133,7 @@ function Client() {
         </motion.div>
 
         <div className="bg-primary text-white pb-[80px] pt-[80px] md:mt-[150px] ">
-          <motion.div
-            variants={fadeIn("right", 0.3)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: true, amount: 0.3 }}
-            className=" mx-auto container px-4 "
-          >
+          <div className=" mx-auto container px-4 ">
             <h2 className="text-4xl md:text-6xl text-center  font-bold mb-4 md:mb-8 pb-2 md:pb-5">
               Our Valued Clients
             </h2>
@@ -184,16 +182,10 @@ function Client() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div
-          variants={fadeIn("down", 0.3)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
-          className="p-10 pt-20 max-w-7xl mx-auto container "
-        >
+        <div className="p-10 pt-20 max-w-7xl mx-auto container ">
           {/* <h2 className="text-4xl md:text-6xl text-center text-primary font-bold mb-4 md:mb-8 pb-2 md:pb-10">
             What Our Clients Say
           </h2> */}
@@ -209,7 +201,7 @@ function Client() {
               <TestimonialCard key={index} {...testimonial} />
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* <div className="flex flex-col md:flex-row pt-4 md:pt-20 items-center justify-around p-5">
           <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-4">

@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Image1 from "../assets/articles-img/article-1.jpeg";
 import Image2 from "../assets/articles-img/article-2.jpeg";
 import Image3 from "../assets/articles-img/article-3.jpeg";
+import bg from "../assets/img2.jpg";
 import { useState } from "react";
 import Pagination from "../components/Pagination";
 import { motion } from "framer-motion";
@@ -128,40 +129,35 @@ function Article() {
   return (
     <>
       <Navbar />
+
       <div className="relative">
         {/* Header Banner */}
         <div
           className="w-full h-[50vh] mt-[100px] relative"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), transparent, transparent, transparent)`,
-            backgroundColor: `#005289`,
-            backgroundSize: "200% 100%",
-            animation: "gradientAnimation 5s linear infinite",
+            backgroundImage: `url(${bg})`,
+            backgroundColor: ``,
+            backgroundSize: "cover",
           }}
         >
+          <div className="hero-overlay bg-secondary opacity-50"></div>
           <motion.div
             variants={fadeIn("right", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.3 }}
-            className="text-white text-4xl md:text-7xl font-bold absolute top-40 left-20 "
+            className="text-primary text-4xl md:text-7xl font-bold absolute top-40 left-20 "
           >
             News & Insight
           </motion.div>
         </div>
 
         {/* Category Section */}
-        <motion.div
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
-          className="py-4 text-center my-6 mx-2 md:mx-56 rounded-lg"
-        >
-          <h1 className="text-4xl font-semibold text-primary mb-2">
+        <div className="py-4 text-center my-6 mx-2 md:mx-56 rounded-lg">
+          <h1 className="text-2xl md:text-4xl font-semibold text-primary mb-2">
             Categories
           </h1>
-          <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 justify-center pt-2">
+          <ul className="flex flex-row md:flex-row space-y-0 space-x-3 md:space-y-0 md:space-x-4 justify-center pt-2">
             <li
               className={`text-primary hover:text-secondary cursor-pointer ${
                 selectedCategory === "All" ? "font-semibold" : ""
@@ -195,15 +191,9 @@ function Article() {
               Events
             </li>
           </ul>
-        </motion.div>
+        </div>
         {/* News Articles */}
-        <motion.div
-          variants={fadeIn("down", 0.3)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
-          className="container mx-auto py-6 mt-4"
-        >
+        <div className="container mx-auto py-6 mt-4">
           {displayedArticles.map((article) => (
             <div key={article.id} className="mb-8">
               <div className="flex flex-wrap justify-center items-center">
@@ -232,7 +222,7 @@ function Article() {
 
                   {/* Right Column - Article Content */}
                   <div className="w-full md:w-1/2 p-4 bg-white rounded-r-lg">
-                    <h1 className="text-2xl font-bold text-blue mb-2">
+                    <h1 className="md:text-2xl text-lg font-bold text-blue mb-2">
                       {article.title}
                     </h1>
                     <p className="text-blue mb-2">{article.date}</p>
@@ -250,20 +240,14 @@ function Article() {
               </div>
             </div>
           ))}
-        </motion.div>
-        <motion.div
-          variants={fadeIn("left", 0.3)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.3 }}
-          className="flex justify-center"
-        >
+        </div>
+        <div className="flex justify-center">
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
             onPageChange={handlePageChange}
           />
-        </motion.div>
+        </div>
       </div>
     </>
   );

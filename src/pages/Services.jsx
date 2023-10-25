@@ -44,7 +44,7 @@ const corporateServices = [
   "Employment contract",
   "Company regulation",
   "Collective employment contract",
-  "Emplovment dispute",
+  "Employment dispute",
   "Contract drafting",
   "Contract review",
   "Contract revision",
@@ -55,7 +55,7 @@ const corporateServices = [
   "Cooperation contract",
   "Lease contract",
   "Contract/form template",
-  "Memorandum of meetina",
+  "Memorandum of meeting",
   "Termination of contract",
   "Legal translation",
   "Tort",
@@ -74,42 +74,45 @@ const permitsAndLicensingServices = [
   "Management of Environmental Permits",
   "Industrial Business Permits",
   "Indonesian National Standard (SNI)",
-  "Import Approvals",
+  "Import/Export Permits",
   "Micro Small Business Permits (IUMK)",
   "ID Number (NIK) (For Customs Affairs)",
-  "business identification number (NIB) (separate)",
-  "Agency NPWP",
+  "Business identification number (NIB) (separate)",
+  "Taxpayer Identification Number (NPWP)",
   "E-commerce license",
   "National Agency of Drug and Food Control (BPOM)",
   "Broadcasting License",
   "Foundation Operational License",
-  "Home Industrv Food Production Certificate (PIRT)",
-  "Marketina authorization",
+  "Home Industry Food Production Certificate (PIRT)",
+  "Marketing authorization",
   "And other permits",
 ];
 
 const commersialServices = [
-  "Joint Venture",
+  "Joint venture",
   "Acquisition",
   "Merger",
   "Consolidation",
-  "Split Off",
-  "Sale and Purchase Contract",
-  "Purchase Order",
-  "commercial/business contract",
+  "Split off",
+  "Sale and purchase contract",
+  "Purchase order",
+  "Commercial/business contract",
 ];
 
 const civilAndCriminalLigitimationServices = [
-  "Warning letter",
   "Debt restructuring",
-  "Pavment monitorina",
-  "Civil Lawsuit",
+  "Civil lawsuit",
   "Criminal report",
-  "Suspension of pavment",
   "Criminal/police report",
-  "Civil Action,",
-  "Postponement of Debt Pavment Obligations (PKU)",
-  "Other Legal Remedies Against Court Decisions",
+  "Civil action",
+  "Other legal remedies against court decisions",
+];
+
+const restructurinTurnaroundInsolvency = [
+  "Warning letter",
+  "Payment monitoring",
+  "Suspension of payment",
+  "Postponement of Debt Payment Obligations (PKPU)",
 ];
 
 const Services = () => {
@@ -123,14 +126,20 @@ const Services = () => {
             "url(https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
         }}
       >
-        <div className="hero-overlay bg-opacity-80"></div>
+        <div className="hero-overlay bg-secondary bg-opacity-50"></div>
 
         <div className="hero-content text-neutral-focus">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-left">
+            <motion.div
+              variants={fadeIn("right", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-left"
+            >
               <h1
-                className="relative mb-7 text-secondary text-4xl sm:text-7xl lg:text-7xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-full before:border-t-2
-					 before:border-secondary"
+                className="relative mb-7 text-primary text-4xl sm:text-7xl lg:text-7xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-full before:border-t-2
+					 before:border-primary"
               >
                 Mylaw's Services
               </h1>
@@ -138,13 +147,13 @@ const Services = () => {
                 At Mylaw, we specialize in a wide range of practice areas,
                 ensuring that we can address your legal concerns effectively.
                 Whether you are an individual, a small business, or a large
-                corporation, our team is ready to assist you in profuse areas:
+                corporation, our team is ready to assist you in profuse areas.
               </p>
               <a
-                href=""
-                className="btn btn-secondary hover:pr-10 group transition-all rounded-none"
+                href="/contact-us"
+                className="btn text-white btn-primary hover:pr-10 group transition-all rounded-none"
               >
-                Read More
+                GET IN TOUCH
                 <span className="group-hover:translate-x-4 transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -160,18 +169,12 @@ const Services = () => {
                   </svg>
                 </span>
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
-      <motion.div
-        variants={fadeIn("up", 0.3)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }}
-        className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
-      >
+      <div className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex  lg:flex-row flex-col-reverse">
           <div className="mb-5 lg:w-3/4 flex flex-col">
             <h1 className="text-4xl lg:text-5xl font-bold pb-5 py-2 text-primary after:content-[''] after:block after:py-1 after:border-b after:border-primary after:scale-x-0 hover:after:scale-x-100 after:transition">
@@ -213,15 +216,9 @@ const Services = () => {
             ))}
           </ul>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        variants={fadeIn("left", 0.3)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }}
-        className="py-10 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
-      >
+      <div className="py-10 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="mb-5 lg:w-3/4 flex flex-col">
             <h1 className="text-4xl lg:text-5xl font-bold pb-5 py-2 text-primary after:content-[''] after:block after:py-1 after:border-b after:border-primary after:scale-x-0 hover:after:scale-x-100 after:transition">
@@ -264,15 +261,9 @@ const Services = () => {
             ))}
           </ul>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        variants={fadeIn("right", 0.3)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }}
-        className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
-      >
+      <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="mb-5 lg:w-3/4 flex flex-col">
             <h1 className="text-4xl lg:text-5xl font-bold pb-5 py-2 text-primary after:content-[''] after:block after:py-1 after:border-b after:border-primary after:scale-x-0 hover:after:scale-x-100 after:transition">
@@ -319,15 +310,9 @@ const Services = () => {
             ))}
           </ul>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        variants={fadeIn("left", 0.3)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }}
-        className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
-      >
+      <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="mb-5 lg:w-3/4 flex flex-col">
             <h1 className="text-4xl lg:text-5xl font-bold pb-5 py-2 text-primary after:content-[''] after:block after:py-1 after:border-b after:border-primary after:scale-x-0 hover:after:scale-x-100 after:transition">
@@ -374,15 +359,9 @@ const Services = () => {
             ))}
           </ul>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        variants={fadeIn("right", 0.3)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.3 }}
-        className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
-      >
+      <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="mb-5 lg:w-3/4 flex flex-col">
             <h1 className="text-4xl lg:text-5xl font-bold pb-5 py-2 text-primary after:content-[''] after:block after:py-1 after:border-b after:border-primary after:scale-x-0 hover:after:scale-x-100 after:transition">
@@ -414,10 +393,52 @@ const Services = () => {
             </svg>
           </div>
         </div>
-      </motion.div>
+        <div className="container mx-auto my-8 text-sm md:text:lg">
+          <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            {restructurinTurnaroundInsolvency.map((service) => (
+              <li
+                key={service}
+                className="border md:text-lg border-secondary p-4 items-center text-black text-center  rounded transition-transform hover:scale-105"
+              >
+                {service}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row">
+          <div className="mb-5 lg:w-3/4 flex flex-col">
+            <h1 className="text-4xl lg:text-5xl font-bold pb-5 py-2 text-primary after:content-[''] after:block after:py-1 after:border-b after:border-primary after:scale-x-0 hover:after:scale-x-100 after:transition">
+              Legal Education
+            </h1>
+            <p className="md:text-lg text-justify">
+              Elevate your legal knowledge with our specialized Legal Education
+              team. Gain the insights you need to make informed decisions and
+              excel in your legal endeavors.
+            </p>
+          </div>
+          <div className="flex justify-end">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-[80%] h-auto text-secondary hidden lg:block"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
 
       <motion.div
-        variants={fadeIn("left", 0.3)}
+        variants={fadeIn("right", 0.3)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.3 }}
