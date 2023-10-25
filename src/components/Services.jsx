@@ -43,6 +43,19 @@ const servicesData = [
 ];
 
 const Services = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    centerPadding: "130px",
+    cssEase: "ease-out",
+    arrows: false,
+  };
+
   return (
     <div
       className="hero min-h-screen"
@@ -53,28 +66,31 @@ const Services = () => {
     >
       <div className="hero-overlay bg-opacity-90"></div>
       <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-7xl mx-auto py-2 flex flex-col justify-center items-center">
-          <h2 className="mb-16 text-5xl font-bold">Our Expertise</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-5">
-            {servicesData.map((service) => (
-              <div className="card w-full h-68 glass mb-8" key={service.name}>
-                <figure className="w-min p-5 rounded-full mx-auto bg-primary -mt-10 text-white">
-                  <ServiceLogo logo={service.logo} />
-                </figure>
-                <div className="card-body -mt-6">
-                  <h2 className="card-title justify-center min-h-[5rem]">
-                    {service.name}
-                  </h2>
-                  <p className="text-sm text-gray-300 text-center">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="flex">
+          <h2 className="mb-16 text-5xl font-bold mx-auto">Our Expertise</h2>
+          <div className="w-1 h-[30rem]"></div>
         </div>
       </div>
+      <Slider {...settings} className="w-screen relative top-72">
+        {servicesData.map((service) => (
+          <div
+            className="card w-full h-72 bg-gradient-to-br from-[#005289] to-[#092a40]"
+            key={service.name}
+          >
+            <figure className="w-min p-5 rounded-full mx-auto bg-primary -mt-10 text-white">
+              <ServiceLogo logo={service.logo} />
+            </figure>
+            <div className="card-body -mt-6">
+              <h2 className="card-title justify-center min-h-[5rem] text-white">
+                {service.name}
+              </h2>
+              <p className="text-sm text-gray-300 text-center">
+                {service.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };
