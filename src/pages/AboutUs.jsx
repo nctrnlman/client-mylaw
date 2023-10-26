@@ -1,7 +1,7 @@
 import { FaGavel, FaBalanceScale } from "react-icons/fa";
 import Navbar from "../components/Navbar";
-import aboutHero from "../assets/about-hero.jpg";
-import bgCareer from "../assets/img1.jpg";
+import aboutHero from "../assets/about-hero-compress.jpg";
+import bgCareer from "../assets/img1-compress.jpg";
 import bgWho from "../assets/logo.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";

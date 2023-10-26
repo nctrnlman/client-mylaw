@@ -12,8 +12,46 @@ import {
 import woman from "../assets/woman_contact.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 function ContactUs() {
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = () => {
+    const formData = {
+      name,
+      company,
+      phoneNumber,
+      email,
+      description,
+    };
+
+    // Kirim data ke server (ganti URL dengan URL yang sesuai)
+    fetch("url_penerima_data", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          toast.success("Message sent successfully!");
+        } else {
+          toast.error("Failed to send message.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        toast.error("Failed to send message.");
+      });
+  };
+
   return (
     <>
       <Navbar />
@@ -44,7 +82,9 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="input input-bordered w-full bg-white text-base  "
+                    className="input input-bordered w-full bg-white text-base"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div className="form-control">
@@ -54,7 +94,9 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Company Name"
-                    className="input input-bordered w-full bg-white text-base  "
+                    className="input input-bordered w-full bg-white text-base"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
                   />
                 </div>
                 <div className="form-control">
@@ -64,7 +106,9 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Phone Number"
-                    className="input input-bordered w-full bg-white text-base  "
+                    className="input input-bordered w-full bg-white text-base"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                   />
                 </div>
                 <div className="form-control">
@@ -74,7 +118,9 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Email Address"
-                    className="input input-bordered w-full bg-white text-base  "
+                    className="input input-bordered w-full bg-white text-base"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
               </div>
@@ -84,15 +130,21 @@ function ContactUs() {
                 </label>
                 <textarea
                   placeholder="Briefly describe your inquiry..."
-                  className="textarea textarea-bordered w-full bg-white text-base  "
+                  className="textarea textarea-bordered w-full bg-white text-base"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
               </div>
               <div className="form-control">
-                <button className="btn bg-primary hover:bg-secondary text-white w-full text-base  ">
+                <button
+                  onClick={handleSubmit}
+                  className="btn bg-primary hover:bg-secondary text-white w-full text-base"
+                >
                   Send Message
                 </button>
               </div>
             </div>
+            <ToastContainer />
           </motion.div>
           <motion.img
             variants={fadeIn("left", 0.3)}

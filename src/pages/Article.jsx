@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Image1 from "../assets/articles-img/article-1.jpeg";
 import Image2 from "../assets/articles-img/article-2.jpeg";
 import Image3 from "../assets/articles-img/article-3.jpeg";
-import bg from "../assets/img2.jpg";
+import bg from "../assets/img2-compress.jpg";
 import { useState } from "react";
 import Pagination from "../components/Pagination";
 import { motion } from "framer-motion";

@@ -369,7 +369,7 @@ const Services = () => {
             </h1>
             <p className="md:text-lg text-justify">
               We are a leading and strategic business partner to collect and
-              recover companies' commercial debts effectively without
+              recover companies commercial debts effectively without
               jeopardizing their relationships with customers. Additionally, we
               assure our clients with no money upfront. They pay only when they
               are paid.
