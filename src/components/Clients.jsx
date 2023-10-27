@@ -7,11 +7,11 @@ const Clients = () => {
   return (
     <div className="py-28 px-2 max-w-7xl mx-auto">
       <div className="mb-10 flex justify-center items-center">
-        <h2 className="px-4 py-2 text-4xl font-bold text-center after:content-[''] after:block after:py-2 after:border-b after:border-primary after:scale-x-0 hover:after:scale-x-100 after:transition">
-          Our Clients
+        <h2 className="text-primary px-4 py-2 text-4xl font-bold text-center after:content-[''] after:block after:py-2 after:border-b after:border-secondary after:scale-x-0 hover:after:scale-x-100 after:transition">
+          Strong Clients
         </h2>
       </div>
-      <div className="grid grid-cols-4 gap-5 grid-rows-1 items-center justify-center">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 grid-rows-1 items-center justify-center">
         <img src={hokben} alt="" className="w-1/2 h-auto mx-auto" />
         <img src={perikanan} alt="" className="w-1/2 h-auto mx-auto" />
         <img src={pln} alt="" className="w-1/2 h-auto mx-auto" />
