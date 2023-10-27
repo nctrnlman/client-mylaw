@@ -44,7 +44,7 @@ const servicesData = [
 
 const Services = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -58,30 +58,29 @@ const Services = () => {
 
   return (
     <div
-      className="hero min-h-screen"
+      className="hero min-h-screen relative"
       style={{
         backgroundImage:
           "url(https://images.unsplash.com/photo-1505664063603-28e48ca204eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80)",
       }}
     >
       <div className="hero-overlay bg-opacity-90"></div>
-      <div className="hero-content text-center text-neutral-content">
+      <div className="hero-content text-center text-neutral-content absolute top-40">
         <div className="flex">
           <h2 className="mb-16 text-5xl font-bold mx-auto">Our Expertise</h2>
-          <div className="w-1 h-[30rem]"></div>
         </div>
       </div>
-      <Slider {...settings} className="w-screen relative top-72">
+      <Slider {...settings} className="w-screen relative top-40 md:top-72">
         {servicesData.map((service) => (
           <div
-            className="card w-full h-72 bg-gradient-to-br from-[#005289] to-[#092a40]"
+            className="card min-w-[260px] w-full max-w-[330px] h-[350px] bg-gradient-to-br from-[#005289] to-[#092a40]"
             key={service.name}
           >
             <figure className="w-min p-5 rounded-full mx-auto bg-primary -mt-10 text-white">
               <ServiceLogo logo={service.logo} />
             </figure>
             <div className="card-body -mt-6">
-              <h2 className="card-title justify-center min-h-[5rem] text-white">
+              <h2 className="card-title justify-center text-center min-h-[5rem] text-white">
                 {service.name}
               </h2>
               <p className="text-sm text-gray-300 text-center">
