@@ -133,7 +133,7 @@ function Article() {
       <div className="relative">
         {/* Header Banner */}
         <div
-          className="w-full h-[50vh] mt-[100px] relative"
+          className="w-full h-[50vh] relative"
           style={{
             backgroundImage: `url(${bg})`,
             backgroundColor: ``,

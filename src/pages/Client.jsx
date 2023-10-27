@@ -101,7 +101,7 @@ function Client() {
           viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col  justify-between gap-4 max-w-7xl mx-auto container "
         >
-          <div className="text-center md:text-left w-full mt-[100px] py-20">
+          <div className="text-center md:text-left w-full md:mt-[50px]  md:py-20 py-10 px-3">
             <h2 className="text-4xl md:text-7xl font-bold pb-6">
               <span className="text-black">Discover Our </span>
               <span className="text-primary">Clients</span>

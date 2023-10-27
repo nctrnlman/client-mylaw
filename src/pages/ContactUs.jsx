@@ -55,7 +55,7 @@ function ContactUs() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto max-w-7xl md:mt-[170px] mt-[100px]">
+      <div className="container mx-auto max-w-7xl md:mt-[70px] mt-[30px]">
         <div className="flex flex-col md:flex-row mb-8">
           <motion.div
             variants={fadeIn("right", 0.3)}

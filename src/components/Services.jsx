@@ -2,6 +2,8 @@ import Slider from "react-slick";
 import ServiceLogo from "./ServiceLogo";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 const servicesData = [
   {
@@ -37,7 +39,7 @@ const servicesData = [
   {
     name: "Legal Education",
     description:
-      "Elevate your legal knowledge with our specialized Legal Education Services at [Law Firm Name]. Gain the insights you need to make informed decisions and excel in your legal endeavors.",
+      "Elevate your legal knowledge with our specialized Legal Education Services team. Gain the insights you need to make informed decisions and excel in your legal endeavors.",
     logo: "education",
   },
 ];
@@ -49,8 +51,8 @@ const Services = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 3000,
+    speed: 1000,
+    autoplaySpeed: 2000,
     centerPadding: "130px",
     cssEase: "ease-out",
     arrows: false,
@@ -65,31 +67,45 @@ const Services = () => {
       }}
     >
       <div className="hero-overlay bg-opacity-90"></div>
-      <div className="hero-content text-center text-neutral-content absolute top-40">
+      <motion.div
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.3 }}
+        className="hero-content text-center text-neutral-content absolute top-40"
+      >
         <div className="flex">
-          <h2 className="mb-16 text-5xl font-bold mx-auto">Our Expertise</h2>
+          <h2 className="mb-16 text-4xl md:text-5xl font-bold mx-auto">
+            Our Expertise
+          </h2>
         </div>
+      </motion.div>
+      <div>
+        <Slider {...settings} className="w-screen relative top-40 md:top-72">
+          {servicesData.map((service) => (
+            <motion.div
+              variants={fadeIn("up", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true, amount: 0.3 }}
+              className="card min-w-[260px] w-full max-w-[330px] h-[350px] bg-gradient-to-br from-[#005289] to-[#092a40]"
+              key={service.name}
+            >
+              <figure className="w-min p-5 rounded-full mx-auto bg-primary -mt-10 text-secondary">
+                <ServiceLogo logo={service.logo} />
+              </figure>
+              <div className="card-body -mt-6">
+                <h2 className="card-title justify-center md:text-lg text-base text-center min-h-[5rem] text-secondary">
+                  {service.name}
+                </h2>
+                <p className="text-sm md:text-base text-gray-300 text-center">
+                  {service.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </Slider>
       </div>
-      <Slider {...settings} className="w-screen relative top-40 md:top-72">
-        {servicesData.map((service) => (
-          <div
-            className="card min-w-[260px] w-full max-w-[330px] h-[350px] bg-gradient-to-br from-[#005289] to-[#092a40]"
-            key={service.name}
-          >
-            <figure className="w-min p-5 rounded-full mx-auto bg-primary -mt-10 text-white">
-              <ServiceLogo logo={service.logo} />
-            </figure>
-            <div className="card-body -mt-6">
-              <h2 className="card-title justify-center text-center min-h-[5rem] text-white">
-                {service.name}
-              </h2>
-              <p className="text-sm text-gray-300 text-center">
-                {service.description}
-              </p>
-            </div>
-          </div>
-        ))}
-      </Slider>
     </div>
   );
 };
