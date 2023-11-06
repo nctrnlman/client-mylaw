@@ -39,7 +39,11 @@ const WhatsAppButton = () => {
       onClick={handleClick}
     >
       <div className="flex items-center">
-        <img src={logo} alt="WhatsApp Icon" className="w-6 h-6 " />
+        <img
+          src={logo}
+          alt="WhatsApp Icon"
+          className="w-6 h-6  md:w-10 md:h-10"
+        />
         {isHovered && (
           <span className="text-primary ml-3">Chat with us on WhatsApp</span>
         )}

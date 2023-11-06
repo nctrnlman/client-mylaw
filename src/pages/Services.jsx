@@ -138,7 +138,7 @@ const Services = () => {
               className="text-left"
             >
               <h1
-                className="relative mb-7 text-primary text-4xl sm:text-7xl lg:text-7xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-full before:border-t-2
+                className="relative mb-7 text-white text-4xl sm:text-7xl lg:text-7xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-[60%] before:border-t-2
 					 before:border-primary"
               >
                 Mylaw's Services

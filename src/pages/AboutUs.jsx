@@ -25,7 +25,7 @@ const Services = () => {
               viewport={{ once: true, amount: 0.3 }}
               className="text-left"
             >
-              <h1 className="relative mb-7 text-primary text-4xl lg:text-7xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-1/2 before:border-t-2 before:border-primary">
+              <h1 className="relative mb-7 text-white text-4xl lg:text-7xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-1/2 before:border-t-2 before:border-primary">
                 About Mylaw
               </h1>
               <p className="mt-8 mb-5 md:text-lg text-white">

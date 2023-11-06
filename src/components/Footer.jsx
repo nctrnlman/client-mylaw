@@ -11,7 +11,7 @@ function Footer() {
             alt="MyLaw Logo"
             className="md:w-[85px] w-[80px] scale-150"
           />
-          <p className="">Providing Legal Support since 2022</p>
+          <p className="">Providing Legal Support</p>
         </div>
 
         <nav className="text-white">
