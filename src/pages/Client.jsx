@@ -53,40 +53,22 @@ function Client() {
 
   const testimonialsData = [
     {
-      clientName: "Alice Smith",
-      position: "Marketing Director, XYZ Corp",
+      clientName: "PT Eka Bogainti (HokBen)     ",
+      position: "Juan L.G. - Procurement",
       testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Kami bekerjasama dengan Mylaw.id untuk mengurus Andalalin, SLF dan izin restoran kami lainnya yang berada di Jawa Timur. Sangat responsif, tim bergerak h+1 setelah surat kuasa ditandatangani dan sangat komunikatif dalam pengerjaan. Anggota tim juga sangat paham mengenai dunia perijinan sehingga semua yang dikerjakan beres tuntas. Terima kasih.",
     },
     {
-      clientName: "Bob Johnson",
-      position: "CTO, DEF Company",
+      clientName: "PT Putri Penuai Berkat      ",
+      position: "Putri Sarah - Owner",
       testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Jasa pembuatan PT yang sangat bisa diandalkan. Proses pengerjaannya cepat dan pelayanan yang sigap dan responsif. Seluruh proses mulai dari konsultasi hingga pembuatan dokumen diberikan instruksi yang rinci.",
     },
     {
-      clientName: "Charlie Brown",
-      position: "Founder, GHI Startup",
+      clientName: "CV. Visi Harum Sukses      ",
+      position: "Santa R. - Owner",
       testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    },
-    {
-      clientName: "Diana Miller",
-      position: "COO, JKL Enterprises",
-      testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      clientName: "Edward Davis",
-      position: "CEO, MNO Corporation",
-      testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-    },
-    {
-      clientName: "Fiona White",
-      position: "President, PQR Inc",
-      testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        "Kami sebelumnya memakai jasa legal dari platform lain, proses pengerjaan dan koordinasi sangat lama tidak seperti Mylaw.id yang memberikan layanan cepat sehingga seluruh masalah hukum kami selesai dengan baik.Terimakasih Mylaw.id ",
     },
   ];
 

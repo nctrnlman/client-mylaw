@@ -10,7 +10,7 @@ const TestimonialCard = ({ clientName, position, testimonial }) => {
 
         <div className="border-b-2 border-secondary my-2"></div>
       </div>
-      <p className="md:text-lg">{testimonial}</p>
+      <p className="md:text-lg text-justify">{testimonial}</p>
     </div>
   );
 };

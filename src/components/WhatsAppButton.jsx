@@ -8,13 +8,14 @@ const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const redirectToWhatsApp = () => {
-    const phoneNumber = "1234567890"; // Ganti dengan nomor WhatsApp Anda
-    const message = "Hello!"; // Ganti dengan pesan default Anda
-
+    const phoneNumber = "6281211110564"; // Ganti dengan nomor WhatsApp Anda
+    const message = "Hello Mylaw!"; // Ganti dengan pesan default Anda
+    // 081211110564
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
-    window.location.href = whatsappLink;
+    // window.location.href = whatsappLink;
+    window.open(whatsappLink, "_blank");
   };
 
   const handleMouseEnter = () => {

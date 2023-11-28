@@ -13,7 +13,10 @@ import woman from "../assets/woman_contact.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import emailjs from "emailjs-com";
 
 function ContactUs() {
   const [name, setName] = useState("");
@@ -22,34 +25,34 @@ function ContactUs() {
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmit = () => {
-    const formData = {
-      name,
-      company,
-      phoneNumber,
-      email,
-      description,
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      from_name: name,
+      company: company,
+      phone_number: phoneNumber,
+      email: email,
+      message: description,
     };
 
-    // Kirim data ke server (ganti URL dengan URL yang sesuai)
-    fetch("url_penerima_data", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          toast.success("Message sent successfully!");
-        } else {
-          toast.error("Failed to send message.");
+    emailjs
+      .send(
+        "service_ujhnczt",
+        "template_xvzocyh",
+        templateParams,
+        "GNOv0hdkFXi2COdlS"
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully!", response);
+          toast.success("Email sent successfully!");
+        },
+        (error) => {
+          console.error("Email sending failed!", error);
+          toast.error("Email sending failed!");
         }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        toast.error("Failed to send message.");
-      });
+      );
   };
 
   return (
@@ -73,7 +76,7 @@ function ContactUs() {
                 offer. Our team is ready to assist you.
               </p>
             </div>
-            <div className="rounded-lg shadow-2xl bg-white mt-4 p-4 md:max-w-[70%] ">
+            <form className="rounded-lg shadow-2xl bg-white mt-4 p-4 md:max-w-[70%] ">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="form-control">
                   <label className="label">
@@ -85,6 +88,7 @@ function ContactUs() {
                     className="input input-bordered w-full bg-white text-base"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="form-control">
@@ -104,11 +108,12 @@ function ContactUs() {
                     <span className="label-text text-black">Phone Number</span>
                   </label>
                   <input
-                    type="text"
+                    type="tel"
                     placeholder="Phone Number"
                     className="input input-bordered w-full bg-white text-base"
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="form-control">
@@ -116,11 +121,12 @@ function ContactUs() {
                     <span className="label-text text-black">Email Address</span>
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     placeholder="Email Address"
                     className="input input-bordered w-full bg-white text-base"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
               </div>
@@ -133,6 +139,7 @@ function ContactUs() {
                   className="textarea textarea-bordered w-full bg-white text-base"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
+                  required
                 ></textarea>
               </div>
               <div className="form-control">
@@ -143,7 +150,7 @@ function ContactUs() {
                   Send Message
                 </button>
               </div>
-            </div>
+            </form>
             <ToastContainer />
           </motion.div>
           <motion.img
