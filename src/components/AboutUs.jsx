@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   const settings = {
@@ -119,14 +120,15 @@ const AboutUs = () => {
             entreprises of all sizes, private foundations, individuals, and
             families.
           </p>
-          <a
-            href="/about-us"
+
+          <Link
+            to="/about-us"
             className="btn btn-outline btn-secondary hover:pr-10 group transition-all rounded-none"
           >
             Read More
             <span className="group-hover:translate-x-4 transition-all">
               <svg
-                xmlns="http:www.w3.org/2000/svg"
+                xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className="w-6 h-6"
@@ -138,7 +140,7 @@ const AboutUs = () => {
                 />
               </svg>
             </span>
-          </a>
+          </Link>
         </div>
       </motion.div>
     </div>

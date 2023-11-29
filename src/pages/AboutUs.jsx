@@ -5,6 +5,7 @@ import bgCareer from "../assets/img1-compress.jpg";
 import bgWho from "../assets/logo.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -37,9 +38,9 @@ const Services = () => {
                 your unique needs.
               </p>
 
-              <a
-                href="/contact-us"
-                className="btn text-white  btn-primary hover:pr-10 group transition-all rounded-none"
+              <Link
+                to="/contact-us"
+                className="btn text-white btn-primary hover:pr-10 group transition-all rounded-none"
               >
                 Get in Touch
                 <span className="group-hover:translate-x-4 transition-all">
@@ -56,7 +57,7 @@ const Services = () => {
                     />
                   </svg>
                 </span>
-              </a>
+              </Link>
             </motion.div>
           </div>
         </div>

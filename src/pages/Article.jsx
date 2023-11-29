@@ -7,6 +7,7 @@ import { useState } from "react";
 import Pagination from "../components/Pagination";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { Link } from "react-router-dom";
 
 const newsArticles = [
   {
@@ -229,12 +230,12 @@ function Article() {
                     <div className="mt-2 text-justify">
                       <p>{article.content}</p>
                     </div>
-                    <a
-                      href={`/article/${article.id}`}
+                    <Link
+                      to={`/article/${article.id}`}
                       className="inline-flex items-center justify-center bg-primary text-white hover:bg-secondary hover:text-white border rounded mt-2 py-2 px-4 text-[15px]"
                     >
                       Read More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

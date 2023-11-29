@@ -2,6 +2,7 @@ import ContactUs from "../components/ContactUs";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { Link } from "react-router-dom";
 
 const corporateServices = [
   "Company establishment",
@@ -149,11 +150,12 @@ const Services = () => {
                 Whether you are an individual, a small business, or a large
                 corporation, our team is ready to assist you in profuse areas.
               </p>
-              <a
-                href="/contact-us"
+
+              <Link
+                to="/contact-us"
                 className="btn text-white btn-primary hover:pr-10 group transition-all rounded-none"
               >
-                GET IN TOUCH
+                Get in Touch
                 <span className="group-hover:translate-x-4 transition-all">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +170,7 @@ const Services = () => {
                     />
                   </svg>
                 </span>
-              </a>
+              </Link>
             </motion.div>
           </div>
         </div>

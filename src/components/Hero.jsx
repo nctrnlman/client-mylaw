@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div
@@ -21,9 +22,10 @@ const Hero = () => {
             Your Trusted Path to Legal Victory
           </p>
           <div className="w-max mx-auto group transition-all relative">
-            <a href="/contact-us" className="btn btn-secondary rounded-none">
+            <Link to="/contact-us" className="btn btn-secondary rounded-none">
               Start Consultation Free
-            </a>
+            </Link>
+
             <span className="absolute top-1/2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-10 transition-all">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

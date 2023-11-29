@@ -1,5 +1,6 @@
 import { FaLinkedin, FaInstagram, FaEnvelope, FaYoutube } from "react-icons/fa";
 import mylawLogo from "../assets/footer-logo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -16,24 +17,24 @@ function Footer() {
 
         <nav className="text-white">
           {/* <header className="text-lg font-semibold ">Page</header> */}
-          <a href="/" className="link link-hover">
+          <Link to="/" className="link link-hover">
             Home
-          </a>
-          <a href="/about-us" className="link link-hover">
+          </Link>
+          <Link to="/about-us" className="link link-hover">
             About
-          </a>
-          <a href="/services" className="link link-hover ">
+          </Link>
+          <Link to="/services" className="link link-hover">
             Services
-          </a>
-          <a href="/client" className="link link-hover ">
+          </Link>
+          <Link to="/client" className="link link-hover">
             Clients
-          </a>
-          <a href="/article" className="link link-hover">
+          </Link>
+          <Link to="/article" className="link link-hover">
             News & Insight
-          </a>
-          <a href="/contact-us" className="link link-hover ">
+          </Link>
+          <Link to="/contact-us" className="link link-hover">
             Contact Us
-          </a>
+          </Link>
         </nav>
 
         <div>
@@ -51,7 +52,7 @@ function Footer() {
 
         <div>
           <p className="">Tel. +62 812 1111 0564, +62 878 6588 7051</p>
-          <p className="">Email. mylaw@gmail.com</p>
+          <p className="">Email. contact@mylaw.id, career@mylaw.id</p>
         </div>
 
         <div>
@@ -71,7 +72,7 @@ function Footer() {
             >
               <FaInstagram size={24} className="fill-current " />
             </a>
-            <a href="mailto:mylawid2022@gmail.com">
+            <a href="mailto:contact@mylaw.id">
               <FaEnvelope size={24} className="fill-current " />
             </a>
             <a

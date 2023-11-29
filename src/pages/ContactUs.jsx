@@ -45,7 +45,7 @@ function ContactUs() {
       )
       .then(
         (response) => {
-          console.log("Email sent successfully!", response);
+          // console.log("Email sent successfully!", response);
           toast.success("Email sent successfully!");
         },
         (error) => {
@@ -191,7 +191,7 @@ function ContactUs() {
                 <p className="flex items-center text-lg">
                   <FaLinkedin className="h-6 w-6 mr-2 text-primary" />
                   <a href="https://www.linkedin.com/company/mylaw-id/">
-                    LinkedIn
+                    mylaw.id
                   </a>
                 </p>
                 <p className="flex items-center text-lg">
@@ -206,7 +206,7 @@ function ContactUs() {
                 </p>
                 <p className="flex items-center text-lg">
                   <FaEnvelope className="h-6 w-6 mr-2 text-primary" />
-                  mylawid2022@gmail.com
+                  contact@mylaw.id, career@mylaw.id
                 </p>
               </div>
             </div>
