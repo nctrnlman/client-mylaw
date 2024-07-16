@@ -17,6 +17,7 @@ import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
+import SEO from "../components/SEO";
 
 function ContactUs() {
   const [name, setName] = useState("");
@@ -57,6 +58,11 @@ function ContactUs() {
 
   return (
     <>
+      <SEO
+        title="Contact Us | Mylaw.id"
+        description="Get in touch with Mylaw.id for legal consultation, inquiries, and more. Contact us today!"
+        keywords="Mylaw contact, legal consultation, contact form"
+      />
       <Navbar />
       <div className="container mx-auto max-w-7xl md:mt-[70px] mt-[30px]">
         <div className="flex flex-col md:flex-row mb-8">

@@ -8,6 +8,7 @@ import Pagination from "../components/Pagination";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const newsArticles = [
   {
@@ -129,6 +130,11 @@ function Article() {
 
   return (
     <>
+      <SEO
+        title="News and Insights | Mylaw.id"
+        description="Stay updated with the latest news, legal insights, and articles from Mylaw.id. Explore our blog for valuable information."
+        keywords="Mylaw news, legal insights, articles, blog"
+      />
       <Navbar />
 
       <div className="relative">
