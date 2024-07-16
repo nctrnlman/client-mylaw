@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Link } from "react-router-dom";
-
+import SEO from "../components/SEO";
 const corporateServices = [
   "Company establishment",
   "Shareholder agreement",
@@ -119,6 +119,12 @@ const restructurinTurnaroundInsolvency = [
 const Services = () => {
   return (
     <>
+      <SEO
+        title="Our Services | Mylaw.id"
+        description="Discover the wide range of legal services offered by MYLAW.ID. Our experienced team is here to provide you with expert legal support and solutions."
+        keywords="legal services, law firm, MYLAW.ID, legal solutions, expert legal support"
+      />
+
       <Navbar />
       <div
         className="hero min-h-screen"

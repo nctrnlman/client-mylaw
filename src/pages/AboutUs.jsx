@@ -6,10 +6,15 @@ import bgWho from "../assets/logo.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Link } from "react-router-dom";
-
+import SEO from "../components/SEO";
 const Services = () => {
   return (
     <>
+      <SEO
+        title="About Us | Mylaw.id"
+        description="Learn more about Mylaw's team, values, and commitment to legal excellence."
+        keywords="Mylaw team, Mylaw values, legal excellence"
+      />
       <Navbar />
 
       <div

@@ -1,4 +1,3 @@
-import React from "react";
 import ContactUs from "../components/ContactUs";
 import hokben from "../assets/clients-logo/hokben.png";
 import perikanan from "../assets/clients-logo/perikanan-indonesia.png";
@@ -10,6 +9,7 @@ import Navbar from "../components/Navbar";
 import TestimonialCard from "../components/TestimonialCard";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import SEO from "../components/SEO";
 
 function Client() {
   const clientNamesA = [
@@ -75,6 +75,11 @@ function Client() {
 
   return (
     <div>
+      <SEO
+        title="Our Clients | Mylaw.id"
+        description="Explore the diverse and valued clients who have trusted Mylaw on their journey to success."
+        keywords="Mylaw clients, client testimonials, legal services"
+      />
       <Navbar />
       <div>
         <motion.div
