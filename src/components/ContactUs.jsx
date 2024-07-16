@@ -1,4 +1,5 @@
 import woman from "../assets/woman_contact.png";
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   return (
@@ -19,8 +20,8 @@ const ContactUs = () => {
             Get in Touch
           </button>
         </a> */}
-        <a
-          href="/contact-us"
+        <Link
+          to="/contact-us"
           className="btn btn-outline btn-secondary hover:pr-10 group transition-all rounded-none"
         >
           Get in Touch
@@ -38,7 +39,7 @@ const ContactUs = () => {
               />
             </svg>
           </span>
-        </a>
+        </Link>
       </div>
 
       <div className="w-full md:w-1/2 pl-0 md:pl-8 flex justify-end md:justify-end">

@@ -5,9 +5,11 @@ import perikanan from "../assets/clients-logo/perikanan-indonesia.png";
 import pln from "../assets/clients-logo/pln.png";
 import tokio from "../assets/clients-logo/tokio.png";
 import trilogi from "../assets/clients-logo/trilogi.png";
-import logitech from "../assets/clients-logo/logitech.png";
+import gowork from "../assets/clients-logo/gowork.png";
 import Navbar from "../components/Navbar";
 import TestimonialCard from "../components/TestimonialCard";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 function Client() {
   const clientNamesA = [
@@ -42,55 +44,47 @@ function Client() {
     "PT. Putra Damai Abadi",
     "PT. Wahana Tata",
   ];
-  const clientNamesE = ["Schneider Group", "Logitech Singapore Pte, Ltd."];
+  const clientNamesE = [
+    "Schneider Group",
+    "Logitech Singapore Pte, Ltd.",
+    "Galderma Singapore Pte, Ltd.",
+  ];
 
   const logos = [hokben, trilogi, pln, tokio];
 
   const testimonialsData = [
     {
-      clientName: "Alice Smith",
-      position: "Marketing Director, XYZ Corp",
+      clientName: "PT Eka Bogainti (HokBen)     ",
+      position: "Juan L.G. - Procurement",
       testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Kami bekerjasama dengan Mylaw.id untuk mengurus Andalalin, SLF dan izin restoran kami lainnya yang berada di Jawa Timur. Sangat responsif, tim bergerak h+1 setelah surat kuasa ditandatangani dan sangat komunikatif dalam pengerjaan. Anggota tim juga sangat paham mengenai dunia perijinan sehingga semua yang dikerjakan beres tuntas. Terima kasih.",
     },
     {
-      clientName: "Bob Johnson",
-      position: "CTO, DEF Company",
+      clientName: "PT Putri Penuai Berkat      ",
+      position: "Putri Sarah - Owner",
       testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Jasa pembuatan PT yang sangat bisa diandalkan. Proses pengerjaannya cepat dan pelayanan yang sigap dan responsif. Seluruh proses mulai dari konsultasi hingga pembuatan dokumen diberikan instruksi yang rinci.",
     },
     {
-      clientName: "Charlie Brown",
-      position: "Founder, GHI Startup",
+      clientName: "CV. Visi Harum Sukses      ",
+      position: "Santa R. - Owner",
       testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    },
-    {
-      clientName: "Diana Miller",
-      position: "COO, JKL Enterprises",
-      testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      clientName: "Edward Davis",
-      position: "CEO, MNO Corporation",
-      testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-    },
-    {
-      clientName: "Fiona White",
-      position: "President, PQR Inc",
-      testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        "Kami sebelumnya memakai jasa legal dari platform lain, proses pengerjaan dan koordinasi sangat lama tidak seperti Mylaw.id yang memberikan layanan cepat sehingga seluruh masalah hukum kami selesai dengan baik.Terimakasih Mylaw.id ",
     },
   ];
 
   return (
     <div>
       <Navbar />
-      <div className="  ">
-        <div className="flex flex-col  justify-between gap-4 max-w-7xl mx-auto container ">
-          <div className="text-center md:text-left w-full  py-20">
+      <div>
+        <motion.div
+          variants={fadeIn("up", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col  justify-between gap-4 max-w-7xl mx-auto container "
+        >
+          <div className="text-center md:text-left w-full md:mt-[50px]  md:py-20 py-10 px-3">
             <h2 className="text-4xl md:text-7xl font-bold pb-6">
               <span className="text-black">Discover Our </span>
               <span className="text-primary">Clients</span>
@@ -101,9 +95,9 @@ function Client() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-4  mb-12 md:mb-10">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-4  mb-12 md:mb-20">
             {logos.map((logo, index) => (
-              <div key={index} className="w-32  md:w-40 h-auto mx-auto mb-4">
+              <div key={index} className="w-32  md:w-44 h-auto mx-auto mb-4">
                 <img
                   src={logo}
                   alt={`Logo ${index}`}
@@ -113,21 +107,28 @@ function Client() {
             ))}
             <div className="w-36  md:w-[200px] h-auto mx-auto mb-4">
               <img
+                src={gowork}
+                alt=""
+                className="w-full h-auto transform scale-110"
+              />
+            </div>
+            <div className="w-36  md:w-[200px] h-auto mx-auto mb-4">
+              <img
                 src={perikanan}
                 alt=""
                 className="w-full h-auto transform scale-110"
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-primary text-white pb-[80px] pt-[80px] md:mt-[150px] ">
+        {/* <div className="bg-primary text-white pb-[80px] pt-[80px] md:mt-[150px] ">
           <div className=" mx-auto container px-4 ">
             <h2 className="text-4xl md:text-6xl text-center  font-bold mb-4 md:mb-8 pb-2 md:pb-5">
               Our Valued Clients
             </h2>
             <div className="flex flex-col md:flex-row md:justify-between px-4 py-10 gap-4 ">
-              {/* Client Names A */}
+           
               <div className="flex flex-col text-lg mb-4 md:mb-0  ">
                 {clientNamesA.map((name, index) => (
                   <p key={index} className="font-normal mb-2">
@@ -136,7 +137,7 @@ function Client() {
                 ))}
               </div>
 
-              {/* Client Names B */}
+          
               <div className="flex flex-col text-lg mb-4 md:mb-0 ">
                 {clientNamesB.map((name, index) => (
                   <p key={index} className="font-normal mb-2">
@@ -145,7 +146,7 @@ function Client() {
                 ))}
               </div>
 
-              {/* Client Names C */}
+          
               <div className="flex flex-col text-lg mb-4 md:mb-0 ">
                 {clientNamesC.map((name, index) => (
                   <p key={index} className="font-normal mb-2">
@@ -154,7 +155,7 @@ function Client() {
                 ))}
               </div>
 
-              {/* Client Names D */}
+     
               <div className="flex flex-col text-lg mb-4 md:mb-0  ">
                 {clientNamesD.map((name, index) => (
                   <p key={index} className="font-normal mb-2">
@@ -172,9 +173,10 @@ function Client() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="p-10 pt-20 max-w-7xl mx-auto container ">
+        <div className="min-h-screen flex flex-col  items-center justify-center p-10 pt-20 max-w-7xl mx-auto container  ">
+          {/* Konten lainnya */}
           {/* <h2 className="text-4xl md:text-6xl text-center text-primary font-bold mb-4 md:mb-8 pb-2 md:pb-10">
             What Our Clients Say
           </h2> */}
@@ -213,9 +215,15 @@ function Client() {
           </div>
         </div> */}
 
-        <div className="py-5 pb-10 px-5 max-w-7xl mx-auto container  ">
+        <motion.div
+          variants={fadeIn("right", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3 }}
+          className="py-5 pb-10 px-5 max-w-7xl mx-auto container  "
+        >
           <ContactUs />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

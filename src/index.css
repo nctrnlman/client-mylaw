@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.menu li > *:not(ul):not(.menu-title):not(details):active,
+.menu li > *:not(ul):not(.menu-title):not(details).active,
+.menu li > details > summary:active {
+  --tw-bg-opacity: 0;
+  background-color: transparent;
+  --tw-text-opacity: 1;
+}
+
+.hero .slick-list {
+  padding: 50px 60px !important;
+}
+
+.hero .slick-track {
+  width: 4500px !important;
+}
+
+.hero .slick-slide {
+  margin: 0 20px;
+  max-width: 330px;
+  min-width: 260px;
+}

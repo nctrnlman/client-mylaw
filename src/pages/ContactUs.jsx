@@ -10,14 +10,63 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import woman from "../assets/woman_contact.png";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import emailjs from "emailjs-com";
 
 function ContactUs() {
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      from_name: name,
+      company: company,
+      phone_number: phoneNumber,
+      email: email,
+      message: description,
+    };
+
+    emailjs
+      .send(
+        "service_ujhnczt",
+        "template_xvzocyh",
+        templateParams,
+        "GNOv0hdkFXi2COdlS"
+      )
+      .then(
+        (response) => {
+          // console.log("Email sent successfully!", response);
+          toast.success("Email sent successfully!");
+        },
+        (error) => {
+          console.error("Email sending failed!", error);
+          toast.error("Email sending failed!");
+        }
+      );
+  };
+
   return (
     <>
       <Navbar />
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-7xl md:mt-[70px] mt-[30px]">
         <div className="flex flex-col md:flex-row mb-8">
-          <div className="flex-1 p-4 md:pb-7  mx-auto md:mx-0">
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex-1 p-4 md:pb-7  mx-auto md:mx-0"
+          >
             <div>
               <h2 className="text-3xl md:text-7xl  font-bold mb-2 md:mb-4 text-primary">
                 Get in Touch
@@ -27,7 +76,7 @@ function ContactUs() {
                 offer. Our team is ready to assist you.
               </p>
             </div>
-            <div className="rounded-lg shadow-2xl bg-white mt-4 p-4 md:max-w-[70%] ">
+            <form className="rounded-lg shadow-2xl bg-white mt-4 p-4 md:max-w-[70%] ">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="form-control">
                   <label className="label">
@@ -36,7 +85,10 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="input input-bordered w-full bg-white text-base  "
+                    className="input input-bordered w-full bg-white text-base"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="form-control">
@@ -46,7 +98,9 @@ function ContactUs() {
                   <input
                     type="text"
                     placeholder="Company Name"
-                    className="input input-bordered w-full bg-white text-base  "
+                    className="input input-bordered w-full bg-white text-base"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
                   />
                 </div>
                 <div className="form-control">
@@ -54,9 +108,12 @@ function ContactUs() {
                     <span className="label-text text-black">Phone Number</span>
                   </label>
                   <input
-                    type="text"
+                    type="tel"
                     placeholder="Phone Number"
-                    className="input input-bordered w-full bg-white text-base  "
+                    className="input input-bordered w-full bg-white text-base"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="form-control">
@@ -64,9 +121,12 @@ function ContactUs() {
                     <span className="label-text text-black">Email Address</span>
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     placeholder="Email Address"
-                    className="input input-bordered w-full bg-white text-base  "
+                    className="input input-bordered w-full bg-white text-base"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
               </div>
@@ -76,17 +136,28 @@ function ContactUs() {
                 </label>
                 <textarea
                   placeholder="Briefly describe your inquiry..."
-                  className="textarea textarea-bordered w-full bg-white text-base  "
+                  className="textarea textarea-bordered w-full bg-white text-base"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  required
                 ></textarea>
               </div>
               <div className="form-control">
-                <button className="btn bg-primary hover:bg-secondary text-white w-full text-base  ">
+                <button
+                  onClick={handleSubmit}
+                  className="btn bg-primary hover:bg-secondary text-white w-full text-base"
+                >
                   Send Message
                 </button>
               </div>
-            </div>
-          </div>
-          <img
+            </form>
+            <ToastContainer />
+          </motion.div>
+          <motion.img
+            variants={fadeIn("left", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.3 }}
             src={woman}
             alt="Get in Touch"
             className="hidden md:block md:w-[40%] h-auto object-cover align-self-start"
@@ -120,7 +191,7 @@ function ContactUs() {
                 <p className="flex items-center text-lg">
                   <FaLinkedin className="h-6 w-6 mr-2 text-primary" />
                   <a href="https://www.linkedin.com/company/mylaw-id/">
-                    LinkedIn
+                    mylaw.id
                   </a>
                 </p>
                 <p className="flex items-center text-lg">
@@ -131,11 +202,11 @@ function ContactUs() {
                 </p>
                 <p className="flex items-center text-lg">
                   <FaPhone className="h-6 w-6 mr-2 text-primary" />
-                  0812-1111-0564
+                  +62 812 1111 0564, +62 878 6588 7051
                 </p>
                 <p className="flex items-center text-lg">
                   <FaEnvelope className="h-6 w-6 mr-2 text-primary" />
-                  mylawid2022@gmail.com
+                  contact@mylaw.id, career@mylaw.id
                 </p>
               </div>
             </div>
@@ -156,22 +227,23 @@ function ContactUs() {
           <div className="flex flex-col md:flex-row justify-between">
             <div className="w-full md:w-1/3 p-4 text-center flex flex-col gap-4">
               <FaHandsHelping size={64} className="mb-4 mx-auto text-primary" />
-              <h2 className="text-lg md:text-2xl  font-semibold text-black">
+              <h2 className="text-xl md:text-2xl  font-semibold text-black">
                 Reach Out to Us
               </h2>
-              <p className="md:text-lg pt-2">
+              <p className="md:text-lg text-lg pt-2">
                 Take the first step with a free case review. Engage in our chat,
                 or simply fill out our form.
               </p>
             </div>
             <div className="w-full md:w-1/3 p-4 text-center flex flex-col gap-4">
               <FaGavel size={64} className="mb-4 mx-auto text-primary" />
-              <h2 className="text-lg md:text-2xl  font-semibold text-black">
+              <h2 className="text-xl md:text-2xl  font-semibold text-black">
                 Crafting Your Legal Strategy
               </h2>
-              <p className="md:text-lg pt-2">
-                While you focus on your family, we diligently gather evidence
-                and build a robust case on your behalf.
+              <p className="md:text-lg text-lg pt-2">
+                While you focus on your businesses and individuals, we
+                diligently gather evidence and build a robust case on your
+                behalf.
               </p>
             </div>
             <div className="w-full md:w-1/3 p-4 text-center flex flex-col gap-4">
@@ -179,10 +251,10 @@ function ContactUs() {
                 size={64}
                 className="mb-4 mx-auto text-primary"
               />
-              <h2 className="text-lg md:text-2xl font-semibold">
+              <h2 className="text-xl md:text-2xl font-semibold">
                 Compensation Awaits
               </h2>
-              <p className="md:text-lg pt-2">
+              <p className="md:text-lg text-lg pt-2">
                 Join the countless families we’ve assisted in securing billions
                 in settlements and verdicts.
               </p>
