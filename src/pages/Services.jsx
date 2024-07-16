@@ -142,7 +142,7 @@ const Services = () => {
                 className="relative mb-7 text-white text-4xl sm:text-7xl lg:text-7xl font-bold before:content-[''] before:block before:absolute before:-bottom-4 before:w-[60%] before:border-t-2
 					 before:border-primary"
               >
-                Mylaw's Services
+                Mylaw&apos;s Services
               </h1>
               <p className="mt-8 mb-5  sm:text-xl lg:text-lg text-white">
                 At Mylaw, we specialize in a wide range of practice areas,
@@ -220,7 +220,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="py-5 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="py-1 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="mb-5 lg:w-3/4 flex flex-col">
             <h1 className="text-4xl lg:text-5xl font-bold pb-5 py-2 text-primary after:content-[''] after:block after:py-1 after:border-b after:border-primary after:scale-x-0 hover:after:scale-x-100 after:transition">
@@ -311,7 +311,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="py-5 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="py-1 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="mb-5 lg:w-3/4 flex flex-col">
             <h1 className="text-4xl lg:text-5xl font-bold pb-5 py-2 text-primary after:content-[''] after:block after:py-1 after:border-b after:border-primary after:scale-x-0 hover:after:scale-x-100 after:transition">
@@ -360,7 +360,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="py-5 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="py-3 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="mb-5 lg:w-3/4 flex flex-col">
             <h1 className="text-4xl lg:text-5xl font-bold pb-5 py-2 text-primary after:content-[''] after:block after:py-1 after:border-b after:border-primary after:scale-x-0 hover:after:scale-x-100 after:transition">

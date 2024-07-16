@@ -5,6 +5,7 @@ import perikanan from "../assets/clients-logo/perikanan-indonesia.png";
 import pln from "../assets/clients-logo/pln.png";
 import tokio from "../assets/clients-logo/tokio.png";
 import trilogi from "../assets/clients-logo/trilogi.png";
+import gowork from "../assets/clients-logo/gowork.png";
 import Navbar from "../components/Navbar";
 import TestimonialCard from "../components/TestimonialCard";
 import { motion } from "framer-motion";
@@ -94,9 +95,9 @@ function Client() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-4  mb-12 md:mb-10">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-4  mb-12 md:mb-20">
             {logos.map((logo, index) => (
-              <div key={index} className="w-32  md:w-40 h-auto mx-auto mb-4">
+              <div key={index} className="w-32  md:w-44 h-auto mx-auto mb-4">
                 <img
                   src={logo}
                   alt={`Logo ${index}`}
@@ -104,6 +105,13 @@ function Client() {
                 />
               </div>
             ))}
+            <div className="w-36  md:w-[200px] h-auto mx-auto mb-4">
+              <img
+                src={gowork}
+                alt=""
+                className="w-full h-auto transform scale-110"
+              />
+            </div>
             <div className="w-36  md:w-[200px] h-auto mx-auto mb-4">
               <img
                 src={perikanan}
@@ -114,13 +122,13 @@ function Client() {
           </div>
         </motion.div>
 
-        <div className="bg-primary text-white pb-[80px] pt-[80px] md:mt-[150px] ">
+        {/* <div className="bg-primary text-white pb-[80px] pt-[80px] md:mt-[150px] ">
           <div className=" mx-auto container px-4 ">
             <h2 className="text-4xl md:text-6xl text-center  font-bold mb-4 md:mb-8 pb-2 md:pb-5">
               Our Valued Clients
             </h2>
             <div className="flex flex-col md:flex-row md:justify-between px-4 py-10 gap-4 ">
-              {/* Client Names A */}
+           
               <div className="flex flex-col text-lg mb-4 md:mb-0  ">
                 {clientNamesA.map((name, index) => (
                   <p key={index} className="font-normal mb-2">
@@ -129,7 +137,7 @@ function Client() {
                 ))}
               </div>
 
-              {/* Client Names B */}
+          
               <div className="flex flex-col text-lg mb-4 md:mb-0 ">
                 {clientNamesB.map((name, index) => (
                   <p key={index} className="font-normal mb-2">
@@ -138,7 +146,7 @@ function Client() {
                 ))}
               </div>
 
-              {/* Client Names C */}
+          
               <div className="flex flex-col text-lg mb-4 md:mb-0 ">
                 {clientNamesC.map((name, index) => (
                   <p key={index} className="font-normal mb-2">
@@ -147,7 +155,7 @@ function Client() {
                 ))}
               </div>
 
-              {/* Client Names D */}
+     
               <div className="flex flex-col text-lg mb-4 md:mb-0  ">
                 {clientNamesD.map((name, index) => (
                   <p key={index} className="font-normal mb-2">
@@ -165,9 +173,10 @@ function Client() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="p-10 pt-20 max-w-7xl mx-auto container ">
+        <div className="min-h-screen flex flex-col  items-center justify-center p-10 pt-20 max-w-7xl mx-auto container  ">
+          {/* Konten lainnya */}
           {/* <h2 className="text-4xl md:text-6xl text-center text-primary font-bold mb-4 md:mb-8 pb-2 md:pb-10">
             What Our Clients Say
           </h2> */}

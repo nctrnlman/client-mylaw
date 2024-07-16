@@ -40,13 +40,14 @@ function Footer() {
         <div>
           {/* <span className="text-lg font-semibold">Our Location</span> */}
           <p className="">
-            Grand Slipi Tower Lantai 5 Unit i.1
+            {/* Grand Slipi Tower Lantai 5 Unit i.1 */} Jalan Pengadegan Utara
+            II No. 30
             <br />
-            Jalan S. Parman Kav. 22-24, RT. 001, RW. 004 <br /> Kelurahan
-            Palmerah, Kecamatan Palmerah
+            Pancoran, Jakarta Selatan.
             <br />
-            Jakarta Barat, 11480. <br />
             Indonesia
+            <br />
+            <br />
           </p>
         </div>
 

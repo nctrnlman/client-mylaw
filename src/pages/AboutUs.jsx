@@ -1,7 +1,7 @@
 import { FaGavel, FaBalanceScale } from "react-icons/fa";
 import Navbar from "../components/Navbar";
-import aboutHero from "../assets/about-hero-compress.jpg";
-import bgCareer from "../assets/img1-compress.jpg";
+import aboutHero from "../assets/about-hero.jpg";
+import bgCareer from "../assets/img1.jpg";
 import bgWho from "../assets/logo.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
@@ -71,16 +71,16 @@ const Services = () => {
           <p className=" md:text-lg mb-4 text-justify">
             At Mylaw, we pride ourselves on being your go-to legal consultants,
             ready to cater to all your legal needs. Since the first year of our
-            inception, we've achieved an astounding success rate of over 99.8%
-            in settling cases, leaving our clients with 100% satisfaction. Our
-            combined professional and success fees have exceeded seven hundred
-            sixty-five million rupiah in our first of incorporation.
+            inception, we&apos;ve achieved an astounding success rate of over
+            99.8% in settling cases, leaving our clients with 100% satisfaction.
+            Our combined professional and success fees have exceeded seven
+            hundred sixty-five million rupiah in our first of incorporation.
           </p>
           <p className=" md:text-lg mb-4 text-justify">
             Our team at Mylaw is composed of lawyers who have been deeply
             immersed in the world of corporate and commercial law, debt
             recovery, as well as civil and criminal litigation since 2014. In
-            our first of incorporation, we've earned the trust of over 50
+            our first of incorporation, we&apos;ve earned the trust of over 50
             clients who have entrusted us with the responsibility of arbitrating
             and mediating their cases, leading to consistently favorable
             outcomes.
@@ -95,8 +95,9 @@ const Services = () => {
             With our extensive expertise in corporate, commercial, civil law,
             and debt recovery, Mylaw is the preferred choice for landlords,
             tenants, businesses of all sizes, private foundations, individuals,
-            and families seeking to safeguard their rights and interests. We're
-            here to stand by your side and provide the legal support you need.
+            and families seeking to safeguard their rights and interests.
+            We&apos;re here to stand by your side and provide the legal support
+            you need.
           </p>
         </div>
 
