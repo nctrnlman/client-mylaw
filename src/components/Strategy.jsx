@@ -13,7 +13,7 @@ const Strategy = () => {
       <div className="px-5 max-w-7xl mx-auto">
         <div className="mb-10 flex justify-center items-center">
           <h2 className="text-primary px-4 py-2 text-4xl md:text-5xl font-bold text-center after:content-[''] after:block after:py-2 after:border-b after:border-secondary after:scale-x-0 hover:after:scale-x-100 after:transition">
-            Strong Points
+            Why Choose Mylaw Indonesia?
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-5 justify-items-center grid-rows-4">

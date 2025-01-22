@@ -5,6 +5,16 @@ import pln from "../assets/clients-logo/pln.png";
 import tokio from "../assets/clients-logo/tokio.png";
 import trilogi from "../assets/clients-logo/trilogi.png";
 import gowork from "../assets/clients-logo/gowork.png";
+import ptAlkimiaNiagaJaya from "../assets/clients-logo/pt-alkimia-niaga-jaya.jpg";
+import ptCscesCina from "../assets/clients-logo/pt-csces-cina.png";
+import ptCywaInformatikaAlgoritma from "../assets/clients-logo/pt-cywa-informatika-algoritma.jpg";
+import ptEcomConsulting from "../assets/clients-logo/pt-ecom-consulting.png";
+import ptEraTeknikSejahtera from "../assets/clients-logo/pt-era-teknik-sejahtera.jpeg";
+import ptHextoriaDimensiAset from "../assets/clients-logo/pt-hextoria-dimensi-aset.jpg";
+import ptKitalulus from "../assets/clients-logo/pt-kitalulus.png";
+import ptServvoFireIndonesia from "../assets/clients-logo/pt-servvo-fire-indonesia.jpg";
+import ptTriKhatulistiwaFishindo from "../assets/clients-logo/pt-tri-khatulistiwa-fishindo.jpg";
+import ptVidyaIndonesiaSinergi from "../assets/clients-logo/pt-vidya-indonesia-sinergi.jpg";
 import Navbar from "../components/Navbar";
 import TestimonialCard from "../components/TestimonialCard";
 import { motion } from "framer-motion";
@@ -50,26 +60,41 @@ function Client() {
     "Galderma Singapore Pte, Ltd.",
   ];
 
-  const logos = [hokben, trilogi, pln, tokio];
+  const logos = [
+    { src: ptAlkimiaNiagaJaya, name: "PT Alkimia Niaga Jaya" },
+    { src: ptCscesCina, name: "PT CSCEC China" },
+    { src: ptCywaInformatikaAlgoritma, name: "PT Cywa Informatika Algoritma" },
+    { src: ptEcomConsulting, name: "PT Ecom Consulting" },
+    { src: ptEraTeknikSejahtera, name: "PT Era Teknik Sejahtera" },
+    { src: ptHextoriaDimensiAset, name: "PT Hextoria Dimensi Aset" },
+    { src: ptKitalulus, name: "PT Kitalulus" },
+    { src: ptServvoFireIndonesia, name: "PT Servvo Fire Indonesia" },
+    { src: ptTriKhatulistiwaFishindo, name: "PT Tri Khatulistiwa Fishindo" },
+    { src: ptVidyaIndonesiaSinergi, name: "PT Vidya Indonesia Sinergi" },
+    { src: gowork, name: "PT Kolaborasi Global Sukses" },
+    { src: hokben, name: "PT Eka Bogainti" },
+  ];
 
   const testimonialsData = [
     {
-      clientName: "PT Eka Bogainti (HokBen)     ",
-      position: "Juan L.G. - Procurement",
+      clientName:
+        "Distinguished Client: China State Construction Engineering Corporation Ltd.",
+      position: "Project Highlight",
       testimonial:
-        "Kami bekerjasama dengan Mylaw.id untuk mengurus Andalalin, SLF dan izin restoran kami lainnya yang berada di Jawa Timur. Sangat responsif, tim bergerak h+1 setelah surat kuasa ditandatangani dan sangat komunikatif dalam pengerjaan. Anggota tim juga sangat paham mengenai dunia perijinan sehingga semua yang dikerjakan beres tuntas. Terima kasih.",
+        "We provide comprehensive licensing and legal assistance to China State Construction, the world’s largest engineering contractor. The company leads the global construction industry with unparalleled expertise in housing, infrastructure, and urban development. Ranked No. 9 on the 2022 Fortune Global 500 list and topping ENR’s Top 250 Global Contractors, the company operates in over 100 countries, delivering iconic projects, including constructing over 90% of skyscrapers above 300 meters. Our support enables the client to drive development in Indonesia, guided by a commitment to innovation, sustainability, and the 'Belt and Road' initiative.",
     },
     {
-      clientName: "PT Putri Penuai Berkat      ",
-      position: "Putri Sarah - Owner",
+      clientName:
+        "Civil Building and Power Plant Construction Projects, Debt Recovery Service, Industry Establishment, etc.",
+      position: "Project Highlight",
       testimonial:
-        "Jasa pembuatan PT yang sangat bisa diandalkan. Proses pengerjaannya cepat dan pelayanan yang sigap dan responsif. Seluruh proses mulai dari konsultasi hingga pembuatan dokumen diberikan instruksi yang rinci.",
+        "We provide comprehensive legal representation across a diverse array of commercial transactions and dispute resolutions, encompassing contract drafting, negotiation, project execution, and the management of corporate actions involving companies and their stakeholders. Our expertise frequently involves transactions exceeding hundreds of millions of rupiah or tens of thousands of dollars, reflecting our commitment to delivering impactful and strategic legal solutions.",
     },
     {
-      clientName: "CV. Visi Harum Sukses      ",
-      position: "Santa R. - Owner",
+      clientName: "Featured Retainer Service: Gowork, Ecom Consulting, etc.",
+      position: "Project Highlight",
       testimonial:
-        "Kami sebelumnya memakai jasa legal dari platform lain, proses pengerjaan dan koordinasi sangat lama tidak seperti Mylaw.id yang memberikan layanan cepat sehingga seluruh masalah hukum kami selesai dengan baik.Terimakasih Mylaw.id ",
+        "We offer comprehensive legal support through retainer arrangements for F&B, industrial, and construction companies in Indonesia, as well as foreign enterprises with beneficial owners from Singapore, Switzerland, and China. Our practice also includes collaborations with established firms and innovative startups. Notably, we have partnered with Gowork, Indonesia's leading premium coworking and office space provider, boasting over 25 locations across multiple cities and a robust network of 70,000 members. Gowork entrusts us to deliver operational establishment, legal, and compliance services to its members and partners, reflecting our commitment to excellence and tailored solutions.",
     },
   ];
 
@@ -100,30 +125,24 @@ function Client() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-4  mb-12 md:mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
             {logos.map((logo, index) => (
-              <div key={index} className="w-32  md:w-44 h-auto mx-auto mb-4">
-                <img
-                  src={logo}
-                  alt={`Logo ${index}`}
-                  className="w-full h-auto transform scale-110"
-                />
+              <div
+                key={index}
+                className="flex flex-col items-center justify-between w-full h-auto mb-8 text-center transition-all transform hover:scale-105 hover:shadow-lg hover:bg-white p-6 rounded-xl"
+              >
+                <div className="flex-grow flex items-center justify-center mb-4">
+                  <img
+                    src={logo.src}
+                    alt={logo.name}
+                    className="w-auto h-auto transition-all duration-300 ease-in-out"
+                  />
+                </div>
+                <p className="text-sm font-medium text-gray-700 w-full text-center">
+                  {logo.name}
+                </p>
               </div>
             ))}
-            <div className="w-36  md:w-[200px] h-auto mx-auto mb-4">
-              <img
-                src={gowork}
-                alt=""
-                className="w-full h-auto transform scale-110"
-              />
-            </div>
-            <div className="w-36  md:w-[200px] h-auto mx-auto mb-4">
-              <img
-                src={perikanan}
-                alt=""
-                className="w-full h-auto transform scale-110"
-              />
-            </div>
           </div>
         </motion.div>
 
@@ -187,9 +206,7 @@ function Client() {
           </h2> */}
 
           <h2 className="text-4xl md:text-6xl text-center text-primary font-bold mb-10 md:mb-8 pb-2 md:pb-10">
-            <span className="">What Our </span>
-            <span className="">Clients </span>
-            <span className="">Say</span>
+            <span className="">MYLAW INDONESIA MILESTONE</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
@@ -235,3 +252,20 @@ function Client() {
 }
 
 export default Client;
+
+{
+  /* <div className="w-36  md:w-[200px] h-auto mx-auto mb-4">
+<img
+  src={gowork}
+  alt=""
+  className="w-full h-auto transform scale-110"
+/>
+</div>
+<div className="w-36  md:w-[200px] h-auto mx-auto mb-4">
+<img
+  src={perikanan}
+  alt=""
+  className="w-full h-auto transform scale-110"
+/>
+</div> */
+}

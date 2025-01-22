@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import hokben from "../assets/clients-logo/hokben.png";
 import perikanan from "../assets/clients-logo/perikanan-indonesia.png";
 import pln from "../assets/clients-logo/pln.png";
+import ptKitalulus from "../assets/clients-logo/pt-kitalulus.png";
+import ptCscesCina from "../assets/clients-logo/pt-csces-cina.png";
+import gowork from "../assets/clients-logo/gowork.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
@@ -14,15 +17,16 @@ const Clients = () => {
       viewport={{ once: true, amount: 0.3 }}
       className="py-28 px-2 max-w-7xl mx-auto"
     >
-      <div className="mb-10 flex justify-center items-center">
+      <div className="mb-20 flex justify-center items-center">
         <h2 className="text-primary px-4 py-2 text-4xl md:text-5xl font-bold text-center after:content-[''] after:block after:py-2 after:border-b after:border-secondary after:scale-x-0 hover:after:scale-x-100 after:transition">
           Our Clients
         </h2>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 grid-rows-1 items-center justify-center">
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-5 grid-rows-1 items-center justify-center">
+        <img src={ptKitalulus} alt="" className="w-1/2 h-auto mx-auto" />
+        <img src={ptCscesCina} alt="" className="w-1/2 h-auto mx-auto" />
+        <img src={gowork} alt="" className="w-1/2 h-auto mx-auto" />
         <img src={hokben} alt="" className="w-1/2 h-auto mx-auto" />
-        <img src={perikanan} alt="" className="w-1/2 h-auto mx-auto" />
-        <img src={pln} alt="" className="w-1/2 h-auto mx-auto" />
         <div className="flex flex-col justify-center items-center">
           <Link
             to="/client"

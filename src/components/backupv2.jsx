@@ -9,7 +9,7 @@ const servicesData = [
   {
     name: "Corporate Legal",
     description:
-      "Comprehensive support for your business in Indonesia, including incorporation, corporate secretary matters, business compliance (annual obligation, etc), intellectual property, manpower, taxes, and more.",
+      " Comprehensive support for your business in Indonesia, including incorporation, corporate secretary matters, business compliance (annual obligation, etc), intellectual property, manpower, taxes, and more.",
     logo: "corporate",
   },
   {
@@ -45,44 +45,6 @@ const servicesData = [
 ];
 
 const Services = () => {
-  const CustomArrow = ({ direction, onClick }) => {
-    const arrowClass = direction === "prev" ? "left-0" : "right-0";
-    return (
-      <div
-        className={`absolute top-1/2 ${arrowClass} transform -translate-y-1/2 text-white cursor-pointer z-10 p-4`}
-        onClick={onClick}
-      >
-        {direction === "prev" ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12.293 16.707a1 1 0 0 0 0-1.414L7.707 11H16a1 1 0 1 0 0-2H7.707l4.586-4.586a1 1 0 0 0-1.414-1.414l-6 6a1 1 0 0 0 0 1.414l6 6a1 1 0 0 0 1.414 0z"
-              clipRule="evenodd"
-            />
-          </svg>
-        ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              fillRule="evenodd"
-              d="M7.707 16.707a1 1 0 0 0 1.414 0L12.293 12H4a1 1 0 1 0 0 2h8.293l-3.586 3.586a1 1 0 0 0 1.414 1.414l6-6a1 1 0 0 0 0-1.414l-6-6a1 1 0 0 0-1.414 1.414L12.293 10H4a1 1 0 1 0 0 2h8.293l-3.586 3.586a1 1 0 0 0 1.414 1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        )}
-      </div>
-    );
-  };
-
   const settings = {
     dots: true,
     infinite: true,
@@ -93,9 +55,7 @@ const Services = () => {
     autoplaySpeed: 2000,
     centerPadding: "130px",
     cssEase: "ease-out",
-    arrows: true, // Enable arrows
-    prevArrow: <CustomArrow direction="prev" />,
-    nextArrow: <CustomArrow direction="next" />,
+    arrows: false,
   };
 
   return (
@@ -115,36 +75,35 @@ const Services = () => {
         className="flex justify-center items-center text-neutral-content absolute top-20 w-full"
       >
         <div className="flex">
-          <h2 className="mb-16 text-4xl md:text-5xl font-bold text-center text-white">
+          <h2 className="mb-16 text-4xl md:text-5xl font-bold mx-auto">
             Our Expertise
           </h2>
         </div>
       </motion.div>
-      <div className="relative">
+      <div>
         <Slider
           {...settings}
-          className="w-screen text-center relative top-40 md:top-64 overflow-visible"
+          className="w-screen relative top-40 md:top-64 overflow-visible"
         >
           {servicesData.map((service) => (
             <motion.div
-              variants={fadeIn("up", 0.3)} // Animasi masuk
+              variants={fadeIn("up", 0.3)}
               initial="hidden"
-              whileInView="show"
+              whileInView={"show"}
               viewport={{ once: true, amount: 0.3 }}
+              className="card min-w-[260px] w-full max-w-[330px] h-[350px] bg-gradient-to-br from-[#005289] to-[#092a40] relative overflow-visible"
               key={service.name}
-              className="card relative w-full min-w-[260px] max-w-[330px] h-[350px] bg-gradient-to-br from-[#005289] to-[#092a40] overflow-visible"
             >
-              {/* Bagian Logo */}
-              <figure className="pt-10  text-secondary">
+              {/* Ikon Lingkaran */}
+              <figure className="absolute top-[-40px] left-1/2 transform -translate-x-1/2 w-min p-5 rounded-full bg-primary text-secondary z-10">
                 <ServiceLogo logo={service.logo} />
               </figure>
-
-              {/* Bagian Konten */}
-              <div className="card-body">
-                <h2 className="card-title  text-center text-base md:text-lg text-secondary justify-center">
+              {/* Konten */}
+              <div className="card-body mt-10">
+                <h2 className="card-title justify-center md:text-lg text-base text-center min-h-[5rem] text-secondary">
                   {service.name}
                 </h2>
-                <p className="text-center text-sm md:text-base text-gray-300">
+                <p className="text-sm md:text-base text-gray-300 text-center">
                   {service.description}
                 </p>
               </div>

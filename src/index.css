@@ -14,7 +14,7 @@
   --tw-text-opacity: 1;
 }
 
-.hero .slick-list {
+/* .hero .slick-list {
   padding: 50px 60px !important;
 }
 
@@ -26,4 +26,8 @@
   margin: 0 20px;
   max-width: 330px;
   min-width: 260px;
+} */
+
+body {
+  padding-top: 80px;
 }
