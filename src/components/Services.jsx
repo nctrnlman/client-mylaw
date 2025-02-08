@@ -96,6 +96,22 @@ const Services = () => {
     arrows: true, // Enable arrows
     prevArrow: <CustomArrow direction="prev" />,
     nextArrow: <CustomArrow direction="next" />,
+    responsive: [
+      {
+        breakpoint: 1024, // Tablet
+        settings: {
+          slidesToShow: 2,
+          centerPadding: "50px",
+        },
+      },
+      {
+        breakpoint: 768, // Mobile
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "20px",
+        },
+      },
+    ],
   };
 
   return (
